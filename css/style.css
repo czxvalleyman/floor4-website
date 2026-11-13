@@ -146,3 +146,110 @@
  .floor-number{width:39px;height:39px;flex-basis:39px;font-size:18px}
  .floor-name{font-size:11px}
 }
+
+
+/* Silver vintage elevator exterior — static floor indicator, no dial or needle */
+.elevator-drawer{
+  width:min(520px,100vw);
+  padding:22px 30px 28px;
+  color:#24272a;
+  border-left:1px solid #777d82;
+  background:
+    linear-gradient(90deg,#555b60 0%,#d4d7d9 5%,#aeb3b7 14%,#dfe1e2 49%,#8c9297 50%,#d2d5d7 87%,#666d72 100%);
+  box-shadow:-24px 0 70px #0009,inset 0 0 0 5px #ffffff55,inset 0 0 36px #3338;
+}
+.elevator-drawer:before{
+  content:"";position:absolute;z-index:-1;inset:8px;
+  background:
+    linear-gradient(90deg,#7e858a 0%,#d9dcde 18%,#aeb4b8 49.6%,#555d63 50%,#bfc4c8 50.5%,#e2e4e5 82%,#737a80 100%);
+  box-shadow:inset 0 0 30px #30363b88,inset 0 0 2px 2px #fff;
+  pointer-events:none;
+}
+.elevator-drawer:after{
+  content:"";position:absolute;z-index:-1;inset:8px 50% 8px auto;width:2px;
+  background:linear-gradient(180deg,#f4f5f5,#4d5459 50%,#e9ebec);
+  box-shadow:0 0 9px #fff9;
+  pointer-events:none;
+}
+.drawer-top{border-color:#626a70}
+.drawer-brand{color:#252a2e;text-shadow:0 1px #fff8}
+.drawer-close{color:#252a2e;background:linear-gradient(#f4f5f5,#aeb4b8);border:1px solid #687077;box-shadow:inset 0 1px #fff,0 2px 5px #3335}
+.drawer-close:hover{background:linear-gradient(#f7d5d2,#c94b42);color:#fff;border-color:#8e2620}
+.panel-label{color:#454c51;margin:14px 0 8px;text-shadow:0 1px #fff9}
+.floor-gauge{display:none!important}
+.floor-indicator{
+  width:min(100%,360px);margin:0 auto 14px;padding:10px 14px 12px;
+  border:1px solid #62696e;border-radius:3px;
+  background:linear-gradient(180deg,#292e32,#101316 48%,#343a3f);
+  box-shadow:inset 0 1px 2px #fff5,inset 0 -2px 5px #000c,0 4px 10px #2228;
+}
+.indicator-caption{text-align:center;color:#c5c9cb;font:700 9px 'Space Grotesk';letter-spacing:.24em;margin-bottom:8px}
+.indicator-numbers{display:flex;justify-content:space-between;align-items:center;gap:4px}
+.indicator-number{
+  width:30px;height:30px;display:grid;place-items:center;
+  color:#d9dddf;font:600 15px 'Space Grotesk';
+  border:1px solid #777f85;border-radius:2px;
+  background:linear-gradient(180deg,#4a5156,#1c2125);
+  box-shadow:inset 0 1px #ffffff35,0 2px 3px #0008;
+}
+.indicator-number.missing{border:0;background:transparent;box-shadow:none;color:#8d9295}
+.indicator-number.active{
+  color:#ff5248;border-color:#f15a50;
+  background:linear-gradient(180deg,#48201e,#1c1010);
+  text-shadow:0 0 8px #ff3e35;
+  box-shadow:inset 0 1px #ffffff2a,0 0 10px #e53b3288;
+}
+.drawer-logo{color:#30363a;text-shadow:0 1px #fff9;font-size:21px;margin:0 0 14px}
+.floor-list{
+  padding:18px 16px;gap:11px;
+  border:1px solid #697177;
+  background:linear-gradient(90deg,#858c91 0%,#c6cacc 49.5%,#71797f 50%,#bfc4c7 100%);
+  box-shadow:0 10px 24px #2228,0 0 0 4px #9da3a7,0 0 0 5px #555d62,inset 0 1px 4px #fff;
+}
+.floor-list:before{
+  inset:6px;
+  background:
+    linear-gradient(90deg,#aeb4b8 0%,#d9dcde 49.6%,#747c82 50%,#c4c9cc 100%);
+  box-shadow:inset 0 0 24px #43494e66;
+}
+.floor-list:after{top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,#f4f5f5,#5c646a 50%,#f4f5f5);box-shadow:none}
+.floor-link{
+  min-height:58px;padding:7px 13px;gap:14px;
+  color:#24292d;border:1px solid #777f84;border-radius:30px;
+  background:linear-gradient(180deg,#f0f1f1 0%,#c5c9cb 42%,#969da2 100%);
+  box-shadow:inset 0 2px 2px #fff, inset 0 -2px 4px #5557,0 4px 7px #3338;
+}
+.floor-link:hover,.floor-link:focus-visible{
+  color:#25282b;border-color:#c43d34;
+  background:linear-gradient(180deg,#f7f0ed,#d6b5b2 55%,#a98986);
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #d74a40,0 0 17px #e43a32a6;
+  transform:translateY(-1px);outline:none;
+}
+.floor-link.active{
+  color:#25282b;border-color:#a93a32;
+  background:linear-gradient(180deg,#f1e2df,#d3b4b0 55%,#a88b87);
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #c8453c,0 0 12px #d43c3477;
+}
+.floor-number{
+  width:44px;height:44px;flex-basis:44px;
+  color:#30363a;border:2px solid #7d858a;
+  background:radial-gradient(circle at 32% 22%,#fff 0%,#c5cacc 48%,#777f84 100%);
+  box-shadow:inset 0 2px 4px #fff, inset 0 -3px 5px #5558,0 2px 5px #3337;
+}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{
+  color:#fff;border-color:#bd3d35;
+  background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#c54a42 50%,#6d1e1a 100%);
+  box-shadow:inset 0 2px 4px #fff8,0 0 12px #e64036;
+}
+.floor-name{color:#252a2e;text-shadow:0 1px #fff8}
+.drawer-foot{color:#3f464b;text-shadow:0 1px #fff8}
+@media(max-width:760px){
+ .elevator-drawer{width:100vw;padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
+ .floor-indicator{width:min(100%,330px);margin-bottom:10px;padding:8px 10px}
+ .indicator-number{width:27px;height:27px;font-size:13px}
+ .drawer-logo{font-size:18px;margin-bottom:10px}
+ .floor-list{padding:13px 11px;gap:8px}
+ .floor-link{min-height:50px;padding:5px 10px}
+ .floor-number{width:38px;height:38px;flex-basis:38px;font-size:17px}
+ .floor-name{font-size:11px}
+}
