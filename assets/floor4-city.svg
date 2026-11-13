@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 980" role="img" aria-labelledby="t d">
+<title id="t">FLOOR 4 — The Missing Floor</title><desc id="d">A futuristic city with four elemental towers surrounding a central skyscraper with a deliberate missing fourth floor.</desc>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#080d15"/><stop offset=".58" stop-color="#182332"/><stop offset="1" stop-color="#080b10"/></linearGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#f2d59a"/><stop offset="1" stop-color="#9c7137"/></linearGradient>
+ <linearGradient id="steel" x2="1" y2="0"><stop stop-color="#10151d"/><stop offset=".5" stop-color="#39424b"/><stop offset="1" stop-color="#111720"/></linearGradient>
+ <linearGradient id="fire" x2="0" y2="1"><stop stop-color="#ffb044"/><stop offset=".4" stop-color="#ed321e"/><stop offset="1" stop-color="#60170f"/></linearGradient>
+ <linearGradient id="water" x2="0" y2="1"><stop stop-color="#8ceaff"/><stop offset="1" stop-color="#12658f"/></linearGradient>
+ <linearGradient id="earth" x2="0" y2="1"><stop stop-color="#b5c77a"/><stop offset="1" stop-color="#35472d"/></linearGradient>
+ <linearGradient id="air" x2="0" y2="1"><stop stop-color="#f4f7ff"/><stop offset="1" stop-color="#667c91"/></linearGradient>
+ <radialGradient id="moon"><stop stop-color="#f7d9a0" stop-opacity=".55"/><stop offset="1" stop-color="#a3aabd" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <pattern id="windows" width="34" height="38" patternUnits="userSpaceOnUse"><path d="M8 7h12v19H8z" fill="#e8c17d" opacity=".35"/></pattern>
+</defs>
+<rect width="1800" height="980" fill="url(#sky)"/>
+<circle cx="900" cy="330" r="410" fill="url(#moon)"/>
+<path d="M0 720 Q250 640 430 720 T900 680 T1370 700 T1800 650 V980 H0Z" fill="#080b10"/>
+<g opacity=".42" fill="none" stroke="#a8b4c2"><path d="M0 270 Q260 100 540 250T1100 210T1800 180" stroke-width="2"/><path d="M0 320 Q260 150 540 300T1100 260T1800 230" opacity=".5"/></g>
+<!-- fire tower -->
+<g transform="translate(75 230)"><path d="M0 560 65 150 155 35 245 170 290 560Z" fill="#181b21" stroke="#873326" stroke-width="4"/><path d="M65 150 155 35 245 170 290 560H0Z" fill="url(#fire)" opacity=".18"/><path d="M85 180h140v380H35z" fill="url(#windows)" opacity=".6"/><path d="M20 340 155 260 270 340" fill="none" stroke="#ff4a24" stroke-width="5" filter="url(#glow)"/><path d="M90 35 Q-20 110 40 220 Q-30 300 65 390" fill="none" stroke="#ff4b24" stroke-width="16" opacity=".75" filter="url(#glow)"/><path d="M120 285q35-70 70 0q-35 30-70 0" fill="none" stroke="#ffb04a" stroke-width="7"/><text x="155" y="440" text-anchor="middle" fill="#ffb56a" font-size="22" font-family="sans-serif" letter-spacing="5">FIRE</text></g>
+<!-- water tower -->
+<g transform="translate(390 370)"><path d="M0 420 50 120 130 0 220 125 270 420Z" fill="url(#steel)" stroke="#4d9fbd" stroke-width="3"/><path d="M45 160h180v260H25z" fill="url(#windows)" opacity=".5"/><path d="M40 160Q130 230 230 150M30 250Q130 320 250 250" fill="none" stroke="#52c8f1" stroke-width="9" opacity=".8" filter="url(#glow)"/><path d="M130 245c-42 55-42 80 0 100 42-20 42-45 0-100Z" fill="none" stroke="#8beaff" stroke-width="7"/><text x="135" y="390" text-anchor="middle" fill="#8beaff" font-size="20" letter-spacing="4">WATER</text></g>
+<!-- earth tower -->
+<g transform="translate(1320 350)"><path d="M0 440 45 145 150 15 255 145 300 440Z" fill="url(#steel)" stroke="#778b52" stroke-width="3"/><path d="M55 180h190v260H30z" fill="url(#windows)" opacity=".45"/><path d="M20 260 85 200 145 270 215 190 280 270" fill="none" stroke="#a4bf6a" stroke-width="8" filter="url(#glow)"/><path d="M150 230q-65 35-50 85 60 5 50-85 15 80 65 85 5-55-65-85" fill="none" stroke="#c1d98b" stroke-width="6"/><text x="150" y="410" text-anchor="middle" fill="#c1d98b" font-size="20" letter-spacing="4">EARTH</text></g>
+<!-- air tower -->
+<g transform="translate(1540 210)"><path d="M0 570 60 155 150 0 240 155 300 570Z" fill="url(#steel)" stroke="#9daebd" stroke-width="3"/><path d="M65 185h170v380H35z" fill="url(#windows)" opacity=".42"/><path d="M-10 220Q150 120 310 230M-15 315Q150 220 315 325" fill="none" stroke="#dce9f2" stroke-width="9" opacity=".8" filter="url(#glow)"/><path d="M120 270q30-45 60 0-30 45-60 0m-30 20h120" fill="none" stroke="#e5f4ff" stroke-width="6"/><text x="150" y="490" text-anchor="middle" fill="#e5f4ff" font-size="20" letter-spacing="4">AIR</text></g>
+<!-- central tower: floor 4 intentionally absent -->
+<g transform="translate(650 65)">
+ <path d="M0 760 55 160 185 0 315 160 370 760Z" fill="url(#steel)" stroke="#a98a56" stroke-width="5"/>
+ <path d="M65 180 185 0 305 180" fill="none" stroke="#d6b579" stroke-width="7" filter="url(#glow)"/>
+ <path d="M65 180h240v120H65z" fill="#10151d" stroke="#927449" stroke-width="3"/>
+ <text x="185" y="265" text-anchor="middle" fill="#f3d69a" font-size="58" font-family="sans-serif">5</text>
+ <path d="M50 300h270v28H50z" fill="#c08a4c" opacity=".8"/>
+ <path d="M50 328h270v112H50z" fill="#080d13" stroke="#e33c2d" stroke-width="5" filter="url(#glow)"/>
+ <path d="M50 328h270v112H50z" fill="#e52b20" opacity=".1"/>
+ <text x="185" y="402" text-anchor="middle" fill="#ff473b" font-size="52" font-family="sans-serif" font-weight="bold" filter="url(#glow)">FLOOR 4</text>
+ <path d="M65 440h240v112H65z" fill="#111720" stroke="#a88955" stroke-width="3"/>
+ <text x="185" y="520" text-anchor="middle" fill="#f3d69a" font-size="55">3</text>
+ <path d="M65 552h240v90H65z" fill="#111720" stroke="#a88955" stroke-width="3"/><text x="185" y="618" text-anchor="middle" fill="#f3d69a" font-size="50">2</text>
+ <path d="M65 642h240v90H65z" fill="#111720" stroke="#a88955" stroke-width="3"/><text x="185" y="708" text-anchor="middle" fill="#f3d69a" font-size="50">1</text>
+ <path d="M0 760h370" stroke="#e3bd79" stroke-width="7" filter="url(#glow)"/>
+</g>
+<g fill="none" stroke="#a98954" stroke-width="5" opacity=".65"><path d="M300 770H650M1020 770h310"/><path d="M520 620h130m370 0h140"/></g>
+<rect y="890" width="1800" height="90" fill="#070a0f" opacity=".75"/>
+</svg>
