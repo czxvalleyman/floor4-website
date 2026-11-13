@@ -763,3 +763,35 @@ body:before{
 .section{
   background:linear-gradient(180deg,rgba(7,13,24,.10),rgba(7,13,24,.22))!important;
 }
+
+
+/* Individual FLOOR identity backgrounds — same visual family, page-specific number */
+body:not([class]):before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor1-background.svg")!important;
+}
+body.page-tokenomics:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor2-background.svg")!important;
+}
+body.page-presale:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor3-background.svg")!important;
+}
+body.page-roadmap:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor5-background.svg")!important;
+}
+body.page-whitepaper:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor6-background.svg")!important;
+}
+body.page-community:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor7-background.svg")!important;
+}
+body.page-faq:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor8-background.svg")!important;
+}
+body:before{
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+}
+@media(max-width:760px){
+ body:before{background-position:center center!important}
+}
