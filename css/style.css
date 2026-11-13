@@ -8,3 +8,10 @@
 .site-footer{border-top:1px solid var(--line);padding:32px 0 44px;color:#8e8e8c;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{font:700 15px 'Space Grotesk';letter-spacing:.14em;color:var(--gold2)}.legal{max-width:850px;margin-top:20px;line-height:1.7}
 @media(max-width:760px){.header-inner{height:68px}.brand{font-size:18px}.hero{min-height:690px}.hero-art{background-position:52% top;background-size:auto 78%;background-repeat:no-repeat}.hero-content{padding-bottom:44px}.section{padding:65px 0}.grid-2,.grid-3,.stat-grid{grid-template-columns:1fr}.page-hero{padding:70px 0 50px}.page-content{padding:45px 0 75px}.elevator-drawer{padding:20px 18px}.milestone{grid-template-columns:58px 1fr;gap:12px;padding:18px}.milestone-no{font-size:25px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Elevator doors behind the floor selector */
+.floor-list{position:relative;isolation:isolate;padding:22px 16px;gap:12px;border:1px solid #555b;background:linear-gradient(90deg,#656b71 0%,#c8cbd0 8%,#858b91 48%,#d2d4d7 92%,#60666d 100%);box-shadow:inset 0 0 0 5px #555b,inset 0 0 28px #252a30,0 8px 18px #2225}
+.floor-list:before{content:"";position:absolute;z-index:-1;inset:7px;background:linear-gradient(90deg,#737a81 0%,#b9bec3 18%,#8d949b 49.6%,#555d65 50%,#aeb4ba 51%,#d0d3d6 82%,#717980 100%);box-shadow:inset 0 0 22px #20252b,inset 0 0 2px 1px #eef0f2}
+.floor-list:after{content:"";position:absolute;z-index:-1;top:7px;bottom:7px;left:50%;width:2px;transform:translateX(-1px);background:linear-gradient(180deg,#e1e3e5,#50575e 45%,#d5d8db);box-shadow:0 0 7px #fff8}
+.floor-link{position:relative;z-index:1;background:linear-gradient(100deg,#e2e3e4,#aeb3b8 55%,#e0e1e2);border-color:#555b}
+@media(max-width:760px){.floor-list{padding:18px 12px}}
