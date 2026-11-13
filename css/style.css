@@ -661,3 +661,73 @@ body.page-tokenomics .page-content,body.page-presale .page-content,body.page-roa
   .floor-link{min-height:46px;padding:4px 9px}
   .floor-number{width:34px;height:34px;flex-basis:34px;font-size:16px}
 }
+
+
+/* SITE BACKGROUND — richer colour, soft organic light and no hard geometry.
+   Atmospheric colour stays behind the content; approved menu/button styling is untouched. */
+body{
+  position:relative;
+  isolation:isolate;
+  background:#080d17!important;
+}
+body:before{
+  content:"";
+  position:fixed;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 58% 46% at 12% 18%,rgba(24,91,151,.34),transparent 72%),
+    radial-gradient(ellipse 52% 48% at 88% 24%,rgba(108,48,92,.25),transparent 72%),
+    radial-gradient(ellipse 62% 48% at 55% 78%,rgba(17,91,105,.24),transparent 74%),
+    radial-gradient(ellipse 34% 30% at 82% 88%,rgba(160,91,39,.18),transparent 72%),
+    linear-gradient(145deg,#0b1727 0%,#101522 42%,#090e19 100%);
+  filter:saturate(1.18);
+}
+.hero{
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse 58% 65% at 18% 30%,rgba(27,104,166,.38),transparent 72%),
+    radial-gradient(ellipse 46% 58% at 82% 22%,rgba(135,54,92,.27),transparent 72%),
+    radial-gradient(ellipse 55% 48% at 56% 85%,rgba(20,111,117,.22),transparent 74%),
+    linear-gradient(145deg,#0c1a2b 0%,#111522 55%,#090e18 100%)!important;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:-12%;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 34% 22% at 26% 34%,rgba(75,157,206,.17),transparent 75%),
+    radial-gradient(ellipse 28% 30% at 75% 46%,rgba(194,112,69,.12),transparent 75%);
+  filter:blur(34px);
+}
+.hero-content{z-index:1}
+.page-hero{
+  background:
+    radial-gradient(ellipse 65% 110% at 82% 10%,rgba(42,111,157,.30),transparent 72%),
+    radial-gradient(ellipse 48% 95% at 12% 20%,rgba(133,54,91,.19),transparent 72%),
+    linear-gradient(145deg,rgba(17,31,48,.92),rgba(9,14,24,.92))!important;
+}
+.page-content{
+  background:
+    radial-gradient(ellipse 60% 38% at 82% 0%,rgba(20,92,111,.10),transparent 75%),
+    linear-gradient(180deg,rgba(8,13,23,.20),rgba(8,13,23,.48))!important;
+}
+.section{
+  position:relative;
+  background:linear-gradient(180deg,rgba(8,13,23,.06),rgba(8,13,23,.20));
+}
+.surface,.stat,.milestone,.book-panel{
+  border-radius:14px;
+}
+@media(max-width:760px){
+  body:before{
+    background:
+      radial-gradient(ellipse 85% 34% at 8% 12%,rgba(24,91,151,.30),transparent 74%),
+      radial-gradient(ellipse 80% 38% at 94% 35%,rgba(108,48,92,.22),transparent 74%),
+      radial-gradient(ellipse 90% 40% at 50% 82%,rgba(17,91,105,.20),transparent 76%),
+      linear-gradient(145deg,#0b1727 0%,#101522 48%,#090e19 100%);
+  }
+}
