@@ -303,3 +303,37 @@ body{background:radial-gradient(ellipse at 12% 8%,rgba(80,103,122,.16),transpare
 .floor-number{width:42px;height:42px;flex-basis:42px;color:#30363a;border:2px solid #7d858a;background:radial-gradient(circle at 32% 22%,#fff 0%,#c5cacc 48%,#777f84 100%);box-shadow:inset 0 2px 4px #fff,inset 0 -3px 5px #5558,0 2px 5px #3337}
 .floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{color:#fff;border-color:#bd3d35;background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#c54a42 50%,#6d1e1a 100%);box-shadow:inset 0 2px 4px #fff8,0 0 12px #e64036}
 .floor-name{color:#252a2e;text-shadow:0 1px #fff8}.drawer-foot{color:#3f464b;text-shadow:0 1px #fff8}
+
+
+/* FLOOR 4 — cinematic backgrounds for the inner pages.
+   Shared visual language: night architecture, missing-floor negative space,
+   muted antique gold, atmospheric haze and restrained reflections. */
+.page-hero{isolation:isolate;min-height:290px;padding:clamp(76px,9vw,112px) 0 76px;background:#090d13!important;overflow:hidden}
+.page-hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,8,13,.96) 0%,rgba(5,8,13,.78) 48%,rgba(5,8,13,.3) 100%),url('../assets/floor4-city.svg') center 42%/cover no-repeat;opacity:.88}
+.page-hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,transparent 55%,#090d13 100%),radial-gradient(ellipse at 78% 34%,rgba(213,180,119,.18),transparent 34%)}
+.page-hero .section-kicker{color:#d5b477}
+.page-hero h1{text-shadow:0 5px 28px #000}
+.page-content{position:relative;isolation:isolate;overflow:hidden;background:#090d13!important}
+.page-content:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.36;background:radial-gradient(ellipse at 78% 12%,rgba(74,91,111,.2),transparent 42%),linear-gradient(180deg,rgba(9,13,19,.2),#090d13 82%)}
+.page-content>.wrap{position:relative;z-index:1}
+.page-content .surface,.page-content .stat,.page-content .milestone,.page-content .book-panel,.page-content .faq-item{background:linear-gradient(145deg,rgba(27,34,44,.94),rgba(12,17,25,.97));border-color:rgba(213,180,119,.2);box-shadow:0 18px 46px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.035)}
+.page-content .notice{background:linear-gradient(110deg,rgba(213,180,119,.10),rgba(17,24,33,.72));border-color:rgba(213,180,119,.34)}
+/* Tokenomics: a night tower facade with fine floor divisions and a missing fourth level. */
+.page-tokenomics .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.72) 55%,rgba(5,8,13,.24)),url('../assets/floor4-city.svg') 67% 38%/cover no-repeat}
+.page-tokenomics .page-content:before{opacity:.5;background:repeating-linear-gradient(0deg,transparent 0 82px,rgba(213,180,119,.08) 83px,transparent 84px),linear-gradient(90deg,transparent 0 68%,rgba(213,180,119,.06) 68.1%,transparent 68.3%),radial-gradient(ellipse at 82% 8%,rgba(70,96,120,.25),transparent 45%)}
+/* Presale: closed elevator doors, brushed-metal seams and a narrow warm light at the threshold. */
+.page-presale .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.96),rgba(5,8,13,.75) 52%,rgba(5,8,13,.38)),linear-gradient(90deg,transparent 0 71%,rgba(164,174,184,.15) 71.1%,rgba(8,12,17,.2) 71.5%,transparent 72%),url('../assets/floor4-city.svg') 72% 40%/cover no-repeat}
+.page-presale .page-content:before{opacity:.48;background:linear-gradient(90deg,transparent 0 72%,rgba(174,184,194,.07) 72.1%,transparent 72.4%),linear-gradient(180deg,transparent 0 80%,rgba(213,180,119,.12) 100%),radial-gradient(ellipse at 80% 90%,rgba(213,180,119,.16),transparent 34%)}
+/* Roadmap: architectural floor plan / blueprint lines, like a route through the building. */
+.page-roadmap .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.74) 56%,rgba(5,8,13,.34)),url('../assets/floor4-city.svg') 70% 42%/cover no-repeat}
+.page-roadmap .page-content:before{opacity:.55;background:repeating-linear-gradient(0deg,transparent 0 54px,rgba(213,180,119,.075) 55px,transparent 56px),repeating-linear-gradient(90deg,transparent 0 78px,rgba(213,180,119,.06) 79px,transparent 80px),radial-gradient(ellipse at 84% 18%,rgba(66,101,126,.2),transparent 44%)}
+/* Whitepaper: quiet architectural drafting grid and technical depth. */
+.page-whitepaper .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.78) 58%,rgba(5,8,13,.3)),url('../assets/floor4-city.svg') center 36%/cover no-repeat}
+.page-whitepaper .page-content:before{opacity:.38;background:repeating-linear-gradient(0deg,transparent 0 96px,rgba(213,180,119,.07) 97px,transparent 98px),repeating-linear-gradient(90deg,transparent 0 96px,rgba(213,180,119,.055) 97px,transparent 98px),radial-gradient(ellipse at 76% 20%,rgba(80,102,126,.22),transparent 48%)}
+/* Community: distant city lights, warm windows and a shared night skyline. */
+.page-community .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.96),rgba(5,8,13,.68) 52%,rgba(5,8,13,.26)),url('../assets/floor4-city.svg') 64% 42%/cover no-repeat}
+.page-community .page-content:before{opacity:.52;background:radial-gradient(circle at 15% 20%,rgba(213,180,119,.18) 0 1px,transparent 3px),radial-gradient(circle at 35% 46%,rgba(213,180,119,.14) 0 1px,transparent 3px),radial-gradient(circle at 76% 22%,rgba(213,180,119,.16) 0 1px,transparent 3px),radial-gradient(circle at 88% 65%,rgba(213,180,119,.13) 0 1px,transparent 3px),radial-gradient(ellipse at 70% 8%,rgba(65,92,119,.25),transparent 50%)}
+/* FAQ: dim corridor depth and subtle pools of light, without distracting from answers. */
+.page-faq .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.78) 56%,rgba(5,8,13,.32)),url('../assets/floor4-city.svg') 70% 40%/cover no-repeat}
+.page-faq .page-content:before{opacity:.44;background:linear-gradient(90deg,transparent 0 12%,rgba(213,180,119,.05) 12.1%,transparent 12.3%,transparent 87%,rgba(213,180,119,.05) 87.1%,transparent 87.3%),radial-gradient(ellipse at 50% 0%,rgba(213,180,119,.12),transparent 38%),linear-gradient(180deg,rgba(22,30,40,.28),transparent 65%)}
+@media(max-width:760px){.page-hero{min-height:250px;padding:72px 0 54px}.page-hero:before{background-position:58% center;background-size:auto 100%}.page-content:before{opacity:.28}}
