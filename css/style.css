@@ -389,3 +389,7 @@ body.page-tokenomics .page-content:before,body.page-presale .page-content:before
   content:none!important;
   display:none!important;
 }
+
+/* Remove old homepage hero artwork too — clean slate for a new background design */
+.hero-art{display:none!important}
+.hero{background:#090d13!important}
