@@ -60,3 +60,89 @@
   .floor-number{width:37px;height:37px;flex-basis:37px;font-size:17px}
   .floor-name{font-size:11px}
 }
+
+
+/* Refinement after visual review: show the whole elevator, not a generic sidebar */
+.elevator-drawer{
+  width:min(560px,100vw);
+  padding:22px 34px 28px;
+  background:
+    linear-gradient(90deg,transparent 0 8%,#ffffff08 8.2%,transparent 9% 49.5%,#ffffff12 50%,transparent 50.5% 91%,#ffffff08 92%,transparent 93%),
+    linear-gradient(90deg,#202326 0%,#111417 48%,#080a0c 50%,#171a1d 100%);
+}
+.elevator-drawer:before{
+  content:"";
+  position:absolute;z-index:-1;inset:0;
+  background:
+    linear-gradient(90deg,transparent 0 49.6%,#050607 49.8%,#77736b 50%,#08090a 50.3%,transparent 50.5%),
+    repeating-linear-gradient(90deg,transparent 0 86px,#ffffff06 87px,#00000022 90px);
+  box-shadow:inset 0 0 70px #000d;
+  pointer-events:none;
+}
+.drawer-top{position:relative}
+.floor-gauge{width:min(100%,390px);height:auto;max-height:190px;margin:0 auto 2px;overflow:visible}
+.floor-gauge .gauge-arc{stroke:#b18a53;stroke-width:6;filter:drop-shadow(0 0 4px #c18b4744)}
+.floor-gauge .gauge-inner{stroke:#6d583b;stroke-width:1.5}
+.floor-gauge .gauge-tick{stroke:#e1c38d;stroke-width:2}
+.floor-gauge .gauge-number{font-size:18px}
+.drawer-logo{font-size:22px;margin:0 0 18px;letter-spacing:.25em}
+.floor-list{
+  padding:20px 18px;
+  gap:12px;
+  border:1px solid #b38a50;
+  background:
+    linear-gradient(90deg,#343638 0%,#202326 48.5%,#101214 50%,#303235 100%);
+  box-shadow:0 18px 36px #000e,0 0 0 4px #17191b,0 0 0 5px #8e6b3d,inset 0 2px 5px #ffffff26;
+}
+.floor-list:before{
+  inset:6px;
+  background:
+    linear-gradient(90deg,#55585a 0%,#303336 49.5%,#101214 50%,#414447 100%),
+    linear-gradient(180deg,#ffffff16,transparent 20%,#0008 100%);
+  box-shadow:inset 0 0 36px #000e;
+}
+.floor-list:after{top:6px;bottom:6px;background:linear-gradient(180deg,#ffffff40,#111 45%,#ffffff24);width:3px}
+.floor-link{
+  min-height:62px;
+  padding:8px 14px;
+  gap:16px;
+  border:1px solid #b69a70;
+  border-radius:34px;
+  background:linear-gradient(180deg,#66686a 0%,#35383b 13%,#202326 50%,#111315 100%);
+  box-shadow:inset 0 2px 2px #ffffff45,inset 0 -3px 5px #000c,0 5px 10px #000d,0 0 0 1px #08090a;
+}
+.floor-link:hover,.floor-link:focus-visible{
+  background:linear-gradient(180deg,#87352f 0%,#4b201e 24%,#211617 100%);
+  border-color:#ff6257;
+  box-shadow:inset 0 2px 2px #ffffff55,inset 0 -3px 5px #000c,0 0 0 1px #f24a40,0 0 24px #e63830b0;
+  transform:translateY(-1px);
+}
+.floor-link.active{
+  background:linear-gradient(180deg,#73312c 0%,#3b1d1b 28%,#171214 100%);
+  border-color:#e34b40;
+  box-shadow:inset 0 2px 2px #ffffff3b,inset 0 -3px 5px #000c,0 0 0 1px #b9332b,0 0 15px #d8322a66;
+}
+.floor-number{
+  width:46px;height:46px;flex-basis:46px;
+  border:2px solid #c1a16b;
+  color:#fff0d1;
+  font-size:21px;
+  background:radial-gradient(circle at 32% 22%,#b0a18a 0%,#514638 44%,#211b16 76%,#090909 100%);
+  box-shadow:inset 0 3px 5px #fff8,inset 0 -4px 6px #000c,0 3px 7px #000d;
+}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{
+  border-color:#ff766c;
+  background:radial-gradient(circle at 32% 22%,#ff8a7d 0%,#bd342b 48%,#4d100d 100%);
+  box-shadow:inset 0 2px 5px #fff8,0 0 18px #ff3e35;
+}
+.floor-name{font-size:13px;letter-spacing:.13em;text-shadow:0 1px 2px #000}
+.drawer-foot{color:#c0a77f;margin-top:17px}
+@media(max-width:760px){
+ .elevator-drawer{width:100vw;padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
+ .floor-gauge{width:min(88vw,350px);max-height:150px}
+ .drawer-logo{font-size:19px;margin-bottom:12px}
+ .floor-list{padding:13px 12px;gap:8px}
+ .floor-link{min-height:51px;padding:5px 11px}
+ .floor-number{width:39px;height:39px;flex-basis:39px;font-size:18px}
+ .floor-name{font-size:11px}
+}
