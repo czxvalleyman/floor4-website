@@ -577,3 +577,87 @@ body.page-tokenomics .page-content,body.page-presale .page-content,body.page-roa
 }
 .hero-art{display:none!important;background:none!important}
 .hero{background:#090d13!important}
+
+
+/* FINAL MENU REFINEMENT — compact drawer, no elevator-door backdrop.
+   Keep the approved silver oval floor buttons and their red hover/active glow. */
+.elevator-drawer{
+  width:min(390px,92vw);
+  padding:20px 22px 24px;
+  color:var(--text);
+  border-left:1px solid rgba(203,176,120,.28);
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(75,101,126,.30),transparent 48%),
+    linear-gradient(145deg,#172332 0%,#101923 58%,#0c131d 100%);
+  box-shadow:-20px 0 55px rgba(0,0,0,.58),inset 1px 0 rgba(255,255,255,.035);
+}
+.elevator-drawer:before,
+.elevator-drawer:after,
+.floor-list:before,
+.floor-list:after{
+  content:none!important;
+  display:none!important;
+}
+.drawer-top{
+  padding-bottom:13px;
+  border-color:rgba(203,176,120,.22);
+}
+.drawer-brand{
+  color:var(--gold2);
+  font-size:18px;
+  letter-spacing:.14em;
+  text-shadow:none;
+}
+.drawer-close{
+  width:34px;height:34px;
+  color:var(--gold2);
+  border:1px solid rgba(203,176,120,.38);
+  background:rgba(255,255,255,.045);
+  box-shadow:none;
+}
+.drawer-close:hover{
+  color:#fff;
+  border-color:var(--red);
+  background:rgba(227,59,48,.22);
+}
+.panel-label{
+  color:#c4ad83;
+  margin:14px 0 8px;
+  text-shadow:none;
+}
+.drawer-logo,.floor-gauge,.floor-indicator{display:none!important}
+.floor-list{
+  width:100%;
+  max-width:340px;
+  margin:0 auto;
+  padding:12px 11px;
+  gap:8px;
+  border:1px solid rgba(203,176,120,.24);
+  border-radius:8px;
+  background:linear-gradient(145deg,rgba(28,40,54,.74),rgba(12,19,29,.78));
+  box-shadow:0 12px 28px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.035);
+}
+.floor-link{
+  min-height:48px;
+  gap:11px;
+  padding:5px 10px;
+}
+.floor-number{
+  width:36px;height:36px;flex-basis:36px;
+  font-size:17px;
+}
+.floor-name{font-size:11px;letter-spacing:.10em}
+.drawer-foot{
+  margin-top:15px;
+  color:#b8a27e;
+  font-size:9px;
+}
+@media(max-width:760px){
+  .elevator-drawer{
+    width:min(370px,92vw);
+    padding:16px 16px calc(18px + env(safe-area-inset-bottom));
+  }
+  .floor-list{padding:10px 9px;gap:7px}
+  .floor-link{min-height:46px;padding:4px 9px}
+  .floor-number{width:34px;height:34px;flex-basis:34px;font-size:16px}
+}
