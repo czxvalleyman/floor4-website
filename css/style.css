@@ -393,3 +393,94 @@ body.page-tokenomics .page-content:before,body.page-presale .page-content:before
 /* Remove old homepage hero artwork too — clean slate for a new background design */
 .hero-art{display:none!important}
 .hero{background:#090d13!important}
+
+
+/* FLOOR 4 brand atmosphere — The Missing Floor */
+:root{
+  --bg:#080d15;
+  --panel:rgba(14,21,31,.90);
+  --panel2:rgba(20,29,41,.92);
+  --text:#f1eee7;
+  --muted:#a9a7a1;
+  --gold:#cbb078;
+  --gold2:#ead5a5;
+  --red:#e33b30;
+  --line:rgba(203,176,120,.24);
+  --silver:#b9c4cf;
+}
+
+/* Shared city backdrop: central tower / absent fourth floor / four elements.
+   Keep the artwork visible behind content without competing with readability. */
+body.page-tokenomics,body.page-presale,body.page-roadmap,body.page-whitepaper,body.page-community,body.page-faq{
+  background:#080d15!important;
+}
+body.page-tokenomics:before,body.page-presale:before,body.page-roadmap:before,body.page-whitepaper:before,body.page-community:before,body.page-faq:before{
+  content:"";
+  display:block!important;
+  position:fixed;
+  inset:78px 0 0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(5,8,13,.28) 0%,rgba(5,8,13,.58) 45%,rgba(5,8,13,.88) 100%),
+    linear-gradient(90deg,rgba(5,8,13,.58),rgba(5,8,13,.12) 48%,rgba(5,8,13,.58)),
+    url('../assets/floor4-city.svg') center 34%/cover no-repeat;
+  opacity:.92;
+}
+body.page-tokenomics .site-header,body.page-presale .site-header,body.page-roadmap .site-header,body.page-whitepaper .site-header,body.page-community .site-header,body.page-faq .site-header{
+  position:sticky;z-index:30;
+}
+body.page-tokenomics main,body.page-presale main,body.page-roadmap main,body.page-whitepaper main,body.page-community main,body.page-faq main,
+body.page-tokenomics .site-footer,body.page-presale .site-footer,body.page-roadmap .site-footer,body.page-whitepaper .site-footer,body.page-community .site-footer,body.page-faq .site-footer{
+  position:relative;z-index:1;
+}
+body.page-tokenomics .page-hero,body.page-presale .page-hero,body.page-roadmap .page-hero,body.page-whitepaper .page-hero,body.page-community .page-hero,body.page-faq .page-hero{
+  min-height:310px;
+  background:linear-gradient(180deg,rgba(7,11,17,.28),rgba(7,11,17,.42))!important;
+  border-bottom:1px solid rgba(203,176,120,.22);
+}
+body.page-tokenomics .page-hero:before,body.page-presale .page-hero:before,body.page-roadmap .page-hero:before,body.page-whitepaper .page-hero:before,body.page-community .page-hero:before,body.page-faq .page-hero:before,
+body.page-tokenomics .page-hero:after,body.page-presale .page-hero:after,body.page-roadmap .page-hero:after,body.page-whitepaper .page-hero:after,body.page-community .page-hero:after,body.page-faq .page-hero:after{
+  content:none!important;display:none!important;
+}
+body.page-tokenomics .page-content,body.page-presale .page-content,body.page-roadmap .page-content,body.page-whitepaper .page-content,body.page-community .page-content,body.page-faq .page-content{
+  background:linear-gradient(180deg,rgba(8,13,21,.48),rgba(8,13,21,.78) 42%,rgba(8,13,21,.92))!important;
+}
+body.page-tokenomics .page-content:before,body.page-presale .page-content:before,body.page-roadmap .page-content:before,body.page-whitepaper .page-content:before,body.page-community .page-content:before,body.page-faq .page-content:before{
+  content:none!important;display:none!important;
+}
+
+/* HOME: restore the approved original city artwork as the hero scene. */
+.hero{background:#080d15!important}
+.hero-art{
+  display:block!important;
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(180deg,rgba(5,8,13,.08) 24%,rgba(5,8,13,.20) 54%,rgba(5,8,13,.82) 100%),
+    url('../assets/floor4-city.svg')!important;
+  background-position:center top!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+}
+
+/* Shared brand surfaces: antique gold details, deep shadow, restrained red accent. */
+.page-content .surface,.page-content .stat,.page-content .milestone,.page-content .book-panel,.page-content .faq-item{
+  background:linear-gradient(145deg,rgba(19,28,40,.94),rgba(8,13,21,.96))!important;
+  border-color:rgba(203,176,120,.25)!important;
+  box-shadow:0 18px 46px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.035);
+}
+.page-content .tag,.page-content .section-kicker{color:var(--gold2)}
+.page-content .notice{
+  background:rgba(203,176,120,.08)!important;
+  border-left-color:var(--gold)!important;
+}
+.page-hero h1,.hero h1{text-shadow:0 5px 30px rgba(0,0,0,.82)}
+@media(max-width:760px){
+  body.page-tokenomics:before,body.page-presale:before,body.page-roadmap:before,body.page-whitepaper:before,body.page-community:before,body.page-faq:before{
+    inset:68px 0 0;
+    background-position:54% top;
+    background-size:auto 82%;
+    opacity:.78;
+  }
+  .hero-art{background-position:54% top!important;background-size:auto 78%!important;background-repeat:no-repeat!important}
+}
