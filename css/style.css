@@ -15,3 +15,48 @@
 .floor-list:after{content:"";position:absolute;z-index:-1;top:7px;bottom:7px;left:50%;width:2px;transform:translateX(-1px);background:linear-gradient(180deg,#e1e3e5,#50575e 45%,#d5d8db);box-shadow:0 0 7px #fff8}
 .floor-link{position:relative;z-index:1;background:linear-gradient(100deg,#e2e3e4,#aeb3b8 55%,#e0e1e2);border-color:#555b}
 @media(max-width:760px){.floor-list{padding:18px 12px}}
+
+
+/* FLOOR 4 elevator concept: foreground controls, subdued doors, animated floor gauge */
+.elevator-drawer{
+  background:linear-gradient(145deg,#17191d 0%,#090b0e 52%,#1b1715 100%);
+  color:#f2e9d8;
+  border-left:1px solid #8b6336;
+  box-shadow:-24px 0 70px #000d;
+}
+.drawer-top{border-color:#9a713d66}
+.drawer-brand{color:#e5c78f;letter-spacing:.16em}
+.drawer-close{color:#f0dfbd;background:#ffffff0a;border-color:#c69a5a88}
+.drawer-close:hover{background:#a92720;color:#fff;border-color:#f14a3f}
+.panel-label{color:#b99b6b;margin:17px 0 8px}
+.floor-gauge{width:min(100%,330px);margin:0 auto 14px;display:block;filter:drop-shadow(0 4px 9px #000b)}
+.floor-gauge .gauge-arc{fill:none;stroke:#8e7047;stroke-width:5}
+.floor-gauge .gauge-inner{fill:none;stroke:#4c4030;stroke-width:1.5}
+.floor-gauge .gauge-tick{stroke:#d0b17b;stroke-width:1.5}
+.floor-gauge .gauge-number{fill:#d8c39c;font:600 17px 'Space Grotesk',sans-serif;text-anchor:middle}
+.floor-gauge .gauge-number.active{fill:#ff493e;filter:drop-shadow(0 0 5px #f22)}
+.floor-gauge .needle{transform-origin:180px 119px;transition:transform .65s cubic-bezier(.2,.8,.2,1)}
+.floor-gauge .needle line{stroke:#f04438;stroke-width:4;stroke-linecap:round;filter:drop-shadow(0 0 5px #f22)}
+.floor-gauge .needle circle{fill:#d5b77e;stroke:#3b2717;stroke-width:3}
+.drawer-logo{text-align:center;color:#e8d4ac;font:700 19px 'Space Grotesk',sans-serif;letter-spacing:.22em;margin:2px 0 17px;text-shadow:0 2px 12px #d32b2144}
+.floor-list{position:relative;isolation:isolate;padding:18px 14px;gap:11px;border:1px solid #9a7547;background:linear-gradient(90deg,#171a1e,#25272a 48%,#171a1e);box-shadow:0 10px 25px #0009,inset 0 0 0 1px #ffffff0b}
+.floor-list:before{inset:5px;background:linear-gradient(90deg,#24272a 0%,#171a1d 49.5%,#090b0d 50%,#1c1f22 100%);box-shadow:inset 0 0 28px #000d}
+.floor-list:after{top:5px;bottom:5px;background:linear-gradient(180deg,#ffffff20,#0008 45%,#ffffff18);box-shadow:none}
+.floor-link{min-height:56px;gap:13px;padding:7px 12px;border:1px solid #88704e;border-radius:30px;background:linear-gradient(105deg,#36383a,#17191c 58%,#303033);color:#f4ead7;box-shadow:inset 0 1px #ffffff24,0 4px 9px #0009;transition:transform .2s,border-color .2s,box-shadow .2s,background .2s}
+.floor-link:hover,.floor-link:focus-visible{border-color:#ff493e;background:linear-gradient(105deg,#5b2422,#211719 58%,#46201e);box-shadow:inset 0 1px #ffffff35,0 0 0 1px #ed3b32,0 0 22px #e52c25a6;transform:translateX(-3px);outline:none}
+.floor-link.active{border-color:#d84337;background:linear-gradient(105deg,#48201e,#1e1718 58%,#38201e);box-shadow:inset 0 1px #ffffff2a,0 0 0 1px #c6322b88,0 0 14px #d62b2455}
+.floor-number{width:42px;height:42px;flex-basis:42px;border:2px solid #92744c;color:#f1dfbd;background:radial-gradient(circle at 35% 25%,#5b5144,#25211d 72%,#111);box-shadow:inset 0 2px 4px #ffffff20,0 2px 5px #000b}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{border-color:#ff5549;color:#fff;background:radial-gradient(circle at 35% 25%,#f45c50,#8d211c 72%,#3d0c0a);box-shadow:0 0 14px #f33b32, inset 0 1px #ffffff55}
+.floor-name{font-size:12px;letter-spacing:.11em;color:#f1e5d1}
+.drawer-foot{color:#a58b68;margin-top:19px}
+@media(max-width:760px){
+  .elevator-drawer{width:min(420px,100vw);padding:16px 16px calc(18px + env(safe-area-inset-bottom))}
+  .drawer-top{padding-bottom:12px}
+  .panel-label{margin:12px 0 4px;font-size:9px}
+  .floor-gauge{width:min(78vw,290px);margin-bottom:7px}
+  .drawer-logo{font-size:17px;margin:0 0 12px}
+  .floor-list{padding:13px 10px;gap:8px}
+  .floor-link{min-height:49px;padding:5px 10px}
+  .floor-number{width:37px;height:37px;flex-basis:37px;font-size:17px}
+  .floor-name{font-size:11px}
+}
