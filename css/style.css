@@ -731,3 +731,35 @@ body:before{
       linear-gradient(145deg,#0b1727 0%,#101522 48%,#090e19 100%);
   }
 }
+
+
+/* FLOOR 4 — uploaded Midnight Waves background */
+body{
+  background:#070d18!important;
+  background-image:none!important;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(5,10,20,.36),rgba(5,10,20,.58)),
+    url("/assets/floor4-background.png");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.hero{
+  background:linear-gradient(rgba(5,10,20,.30),rgba(5,10,20,.48))!important;
+}
+.page-hero{
+  background:linear-gradient(180deg,rgba(7,13,24,.38),rgba(7,13,24,.54))!important;
+}
+.page-content{
+  background:linear-gradient(180deg,rgba(7,13,24,.38),rgba(7,13,24,.58))!important;
+}
+.section{
+  background:linear-gradient(180deg,rgba(7,13,24,.10),rgba(7,13,24,.22))!important;
+}
