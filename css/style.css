@@ -795,3 +795,144 @@ body:before{
 @media(max-width:760px){
  body:before{background-position:center center!important}
 }
+
+
+/* APPROVED HOME ART + WOODEN ELEVATOR MENU — 14 Nov 2026 */
+.hero-art{
+  display:block!important;
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(180deg,rgba(3,7,13,.04) 20%,rgba(3,7,13,.16) 55%,rgba(3,7,13,.82) 100%),
+    url("/assets/home-floor4.jpg")!important;
+  background-size:cover!important;
+  background-position:center top!important;
+  background-repeat:no-repeat!important;
+}
+.hero{background:#050a12!important;min-height:min(850px,calc(100vh - 78px))}
+.hero-content{padding-bottom:54px}
+
+/* Full-height wooden elevator image behind the real, accessible navigation. */
+.elevator-drawer{
+  isolation:isolate;
+  overflow-x:hidden;
+  width:min(354px,92vw);
+  padding:20px 20px 24px;
+  background:#24140c url("/assets/menu-elevator.jpg") center center/cover no-repeat!important;
+  border-left:1px solid rgba(230,173,91,.62);
+  box-shadow:-22px 0 65px rgba(0,0,0,.68);
+}
+.elevator-drawer:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  background:linear-gradient(180deg,rgba(16,7,2,.22),rgba(17,7,2,.48) 48%,rgba(8,4,2,.42));
+  pointer-events:none;
+}
+.drawer-top,.panel-label,.floor-list,.drawer-foot{position:relative;z-index:1}
+.drawer-top{border-bottom:1px solid rgba(255,205,132,.38);padding-bottom:12px}
+.drawer-brand{color:#ffe0a4;text-shadow:0 2px 8px #160700;font-size:18px;letter-spacing:.15em}
+.drawer-close{
+  color:#fff0d5;
+  background:rgba(24,12,5,.55);
+  border:1px solid rgba(255,216,160,.6);
+}
+.drawer-close:hover{background:rgba(173,35,26,.86);color:#fff}
+.panel-label{
+  color:#ffe0ae;
+  text-shadow:0 2px 7px #180900;
+  margin:16px 0 10px;
+}
+.floor-list{
+  display:grid;
+  width:100%;
+  max-width:none;
+  margin:0 auto;
+  padding:4px 0;
+  gap:12px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.floor-list:before,.floor-list:after{content:none!important;display:none!important}
+.floor-link{
+  display:grid;
+  grid-template-columns:40px 1fr;
+  align-items:center;
+  gap:12px;
+  min-height:58px;
+  padding:7px 15px;
+  border:1px solid #72777a!important;
+  border-radius:999px!important;
+  color:#292b2d!important;
+  background:linear-gradient(180deg,#f8f8f6 0%,#d8dadd 22%,#aeb3b8 50%,#e5e7e8 76%,#969da2 100%)!important;
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.95),inset 0 -3px 5px rgba(48,52,56,.42),0 4px 10px rgba(0,0,0,.62)!important;
+  transform:none;
+  transition:filter .18s,box-shadow .18s,border-color .18s,transform .18s;
+}
+.floor-link:hover,.floor-link:focus-visible,.floor-link.active{
+  color:#262729!important;
+  border-color:#ff5147!important;
+  background:linear-gradient(180deg,#fff8f5 0%,#e7c5c0 25%,#b88d88 56%,#e2c9c5 78%,#9d7772 100%)!important;
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #f04a40,0 0 18px rgba(255,54,43,.88),0 4px 10px rgba(0,0,0,.6)!important;
+  transform:translateY(-1px);
+  outline:none;
+}
+.floor-number{
+  width:38px;height:38px;flex:0 0 38px;
+  display:grid;place-items:center;
+  border:2px solid #777e83!important;
+  border-radius:50%;
+  color:#34383b!important;
+  background:radial-gradient(circle at 32% 22%,#fff 0%,#d2d5d7 50%,#858c91 100%)!important;
+  box-shadow:inset 0 2px 4px #fff,inset 0 -2px 4px #5557,0 2px 5px #3338!important;
+  font:700 17px 'Space Grotesk',sans-serif;
+}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{
+  color:#fff!important;
+  border-color:#a92e27!important;
+  background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#d64a40 52%,#6b1714 100%)!important;
+  box-shadow:inset 0 2px 4px #fff9,0 0 13px #ff443b!important;
+}
+.floor-icon{
+  display:none;
+  width:25px;height:25px;
+  grid-column:1;
+  grid-row:1;
+  margin:auto;
+}
+.floor-name{
+  grid-column:2;
+  grid-row:1;
+  color:#282b2e!important;
+  text-shadow:0 1px rgba(255,255,255,.8);
+  font:700 13px 'Georgia',serif!important;
+  letter-spacing:.055em!important;
+}
+.drawer-foot{
+  color:#ffe0ae;
+  text-shadow:0 2px 7px #180900;
+  margin-top:18px;
+  font-size:9px;
+  letter-spacing:.12em;
+}
+@media(max-width:760px){
+  .hero{min-height:calc(100svh - 68px)}
+  .hero-art{
+    background-position:center top!important;
+    background-size:auto 100%!important;
+  }
+  .hero-content{padding:0 18px 36px}
+  .elevator-drawer{
+    width:92vw;
+    max-width:440px;
+    padding:16px 18px calc(20px + env(safe-area-inset-bottom));
+    background-position:center center!important;
+  }
+  .floor-list{gap:10px}
+  .floor-link{min-height:55px;padding:6px 13px}
+  .floor-number{width:36px;height:36px}
+  .floor-name{font-size:12px!important}
+}
