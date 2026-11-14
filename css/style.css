@@ -936,3 +936,116 @@ body:before{
   .floor-number{width:36px;height:36px}
   .floor-name{font-size:12px!important}
 }
+
+
+/* SOFTER ARCHITECTURAL FRAMES — rounded windows, panels and content surfaces.
+   The approved vintage elevator floor buttons are intentionally left untouched. */
+:root{
+  --frame-radius:22px;
+  --frame-radius-large:30px;
+}
+.site-header{
+  border-bottom:1px solid rgba(203,176,120,.20);
+}
+.brand-mark{
+  border-radius:9px 15px 9px 15px;
+  box-shadow:inset 0 1px rgba(255,255,255,.16),0 4px 14px rgba(0,0,0,.24);
+}
+.menu-trigger{
+  border-radius:999px;
+}
+.btn{
+  border-radius:999px;
+}
+.surface,.stat,.milestone,.book-panel{
+  border-radius:var(--frame-radius)!important;
+  border:1px solid rgba(203,176,120,.26)!important;
+  overflow:hidden;
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.30),
+    inset 0 1px rgba(255,255,255,.055),
+    inset 0 0 0 1px rgba(255,255,255,.012)!important;
+}
+.page-content .surface,.page-content .stat,.page-content .milestone,.page-content .book-panel{
+  background:
+    linear-gradient(145deg,rgba(25,37,51,.94),rgba(9,15,24,.97))!important;
+}
+.milestone{
+  grid-template-columns:82px minmax(0,1fr);
+  position:relative;
+}
+.milestone:before,.surface:before,.book-panel:before{
+  content:"";
+  display:block;
+  position:absolute;
+  pointer-events:none;
+}
+.milestone,.surface,.book-panel{position:relative}
+.milestone:before,.surface:before,.book-panel:before{
+  inset:0;
+  border-radius:inherit;
+  border:1px solid rgba(255,255,255,.035);
+}
+.notice{
+  border:1px solid rgba(203,176,120,.20);
+  border-left:3px solid var(--gold);
+  border-radius:5px var(--frame-radius) var(--frame-radius) 5px;
+  box-shadow:0 10px 28px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.04);
+}
+.tag{
+  border-radius:999px;
+  padding:6px 13px;
+  background:rgba(203,176,120,.045);
+}
+.faq-item{
+  border:1px solid rgba(203,176,120,.18);
+  border-radius:16px;
+  padding:18px 22px;
+  margin:0 0 12px;
+  background:linear-gradient(145deg,rgba(20,30,42,.78),rgba(9,14,22,.82));
+  transition:border-color .2s,background .2s,box-shadow .2s;
+}
+.faq-item[open]{
+  border-color:rgba(203,176,120,.42);
+  background:linear-gradient(145deg,rgba(27,40,55,.92),rgba(10,16,25,.96));
+  box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+.faq-item summary{
+  list-style:none;
+  position:relative;
+  padding-right:34px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{
+  content:"+";
+  position:absolute;
+  right:0;top:-5px;
+  width:27px;height:27px;
+  display:grid;place-items:center;
+  border:1px solid rgba(203,176,120,.36);
+  border-radius:50%;
+  color:var(--gold2);
+  font:400 19px/1 Inter,sans-serif;
+  transition:transform .2s,background .2s;
+}
+.faq-item[open] summary:after{
+  content:"−";
+  background:rgba(203,176,120,.10);
+}
+.faq-item p{margin:12px 0 0}
+.data-row{
+  border-bottom-color:rgba(203,176,120,.14);
+}
+.page-hero{
+  border-bottom:1px solid rgba(203,176,120,.20);
+}
+.page-hero .wrap{
+  position:relative;
+}
+@media(max-width:760px){
+  :root{--frame-radius:19px;--frame-radius-large:24px}
+  .surface,.stat,.milestone,.book-panel{padding:21px!important}
+  .milestone{grid-template-columns:52px minmax(0,1fr);gap:12px}
+  .faq-item{padding:16px 17px}
+  .menu-trigger{padding:10px 15px}
+}
