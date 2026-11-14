@@ -1,0 +1,1051 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#090d13;--panel:#121922;--panel2:#19232e;--text:#f1eee7;--muted:#a9a7a1;--gold:#cbb078;--gold2:#ead5a5;--red:#e33b30;--line:rgba(203,176,120,.24);--silver:#b9bec3;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif}body.menu-open{overflow:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+.site-header{position:sticky;top:0;z-index:30;background:rgba(8,12,18,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.header-inner{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font:700 22px 'Space Grotesk',sans-serif;letter-spacing:.16em;color:var(--gold2)}.brand-mark{width:32px;height:32px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:18px;transform:skewY(-8deg)}.menu-trigger{display:flex;align-items:center;gap:12px;border:1px solid var(--gold);border-radius:3px;padding:11px 17px;background:transparent;color:var(--gold2);font-weight:700;letter-spacing:.12em;cursor:pointer;transition:.2s}.menu-trigger:hover{background:rgba(203,176,120,.12)}.hamb{width:19px;display:grid;gap:4px}.hamb i{height:1px;background:currentColor;display:block}
+.menu-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.66);z-index:40;opacity:0;visibility:hidden;transition:.25s}.menu-backdrop.open{opacity:1;visibility:visible}.elevator-drawer{position:fixed;z-index:41;right:0;top:0;height:100dvh;width:min(420px,94vw);padding:26px 28px;background:linear-gradient(120deg,#c9cbd0,#858b91 48%,#c7c9cc);color:#17191c;box-shadow:-24px 0 70px #0009;transform:translateX(105%);transition:transform .32s cubic-bezier(.2,.8,.2,1);overflow:auto}.elevator-drawer.open{transform:translateX(0)}.drawer-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid #5559}.drawer-brand{font:700 22px 'Space Grotesk';letter-spacing:.13em}.drawer-close{border:1px solid #3338;background:#ffffff50;width:38px;height:38px;border-radius:50%;font-size:22px;cursor:pointer;color:#17191c}.panel-label{text-align:center;font-size:10px;letter-spacing:.24em;font-weight:800;margin:20px 0;color:#4b5055}.floor-list{display:grid;gap:10px}.floor-link{display:flex;align-items:center;gap:15px;min-height:59px;padding:8px 13px;border:1px solid #51565c;border-radius:32px;background:linear-gradient(100deg,#e2e3e4,#aeb3b8 55%,#e0e1e2);box-shadow:inset 0 1px #fff,0 3px 7px #2224;color:#181b1f;transition:.18s}.floor-link:hover,.floor-link.active{border-color:#9b7134;box-shadow:inset 0 1px #fff,0 0 0 2px #b18b4c55,0 0 18px #d5b47777;transform:translateX(-3px)}.floor-number{width:40px;height:40px;flex:0 0 40px;border:2px solid #6d6d6d;border-radius:50%;display:grid;place-items:center;font:600 19px 'Space Grotesk';background:radial-gradient(circle at 35% 25%,#fff,#a5a9ad 68%,#656a70);box-shadow:inset 0 2px 4px #fff,0 2px 5px #3338}.floor-link.active .floor-number{border-color:#d2a34f;color:#fff;background:radial-gradient(circle at 35% 25%,#f4d89a,#a87528 72%,#573b18);box-shadow:0 0 14px #d5a64f}.floor-name{font:700 12px 'Space Grotesk';letter-spacing:.09em}.drawer-foot{text-align:center;color:#4e5358;font-size:10px;letter-spacing:.14em;margin-top:25px}
+.hero{position:relative;min-height:min(850px,calc(100vh - 78px));display:flex;align-items:flex-end;overflow:hidden;background:#080d13}.hero-art{position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(5,8,13,.04) 30%,rgba(5,8,13,.16) 58%,#090d13 100%),url('../assets/floor4-city.svg');background-position:center top;background-size:cover}.hero-content{position:relative;z-index:1;text-align:center;width:min(100%,950px);margin:0 auto;padding:0 20px 62px}.eyebrow{font-size:11px;letter-spacing:.27em;text-transform:uppercase;color:var(--gold);font-weight:700}.hero h1{font:600 clamp(42px,7vw,86px)/.98 'Space Grotesk';letter-spacing:.075em;margin:14px 0;color:var(--gold2);text-shadow:0 4px 30px #000}.hero-copy{max-width:680px;margin:18px auto 28px;color:#d1d0ce;letter-spacing:.12em;text-transform:uppercase;font-size:clamp(11px,1.4vw,14px)}.hero-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 23px;border:1px solid var(--gold);color:var(--gold2);font:700 11px 'Space Grotesk';letter-spacing:.1em;text-transform:uppercase;transition:.2s}.btn.primary{background:linear-gradient(120deg,#e5c98e,#b58a49);color:#17130c}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px #d5b47733}
+.section{padding:92px 0;border-top:1px solid var(--line)}.section-kicker{color:var(--gold);font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase}.section h2{font:600 clamp(32px,5vw,54px)/1.05 'Space Grotesk';letter-spacing:-.04em;margin:12px 0 20px}.section-intro{max-width:720px;color:var(--muted);font-size:17px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.surface{background:linear-gradient(145deg,#17212b,#10161e);border:1px solid var(--line);padding:26px}.surface h3{font:600 21px 'Space Grotesk';margin:0 0 12px}.surface p{color:var(--muted);margin:0}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}.stat{padding:24px;border:1px solid var(--line);background:#111923}.stat strong{display:block;color:var(--gold2);font:600 clamp(22px,3vw,34px) 'Space Grotesk'}.stat span{color:var(--muted);font-size:12px}.page-hero{position:relative;padding:95px 0 70px;overflow:hidden;background:radial-gradient(ellipse at 80% 10%,#5b3022 0,transparent 32%),linear-gradient(135deg,#111923,#090d13 72%);border-bottom:1px solid var(--line)}.page-hero:after{content:'05';position:absolute;right:7%;top:-70px;font:700 clamp(180px,30vw,360px)/1 'Space Grotesk';color:#cbb0780b;pointer-events:none}.page-hero h1{position:relative;font:600 clamp(44px,7vw,78px)/1 'Space Grotesk';margin:12px 0 16px;letter-spacing:-.05em}.page-hero p{position:relative;color:var(--muted);max-width:690px;font-size:17px}.page-content{padding:64px 0 100px}.tag{display:inline-flex;padding:6px 10px;border:1px solid var(--line);color:var(--gold);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.data-row{display:flex;justify-content:space-between;gap:15px;padding:14px 0;border-bottom:1px solid var(--line);color:#d8d4cc}.data-row span:last-child{color:var(--gold2);font-weight:600}.bar{height:7px;background:#303943;border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#a67b42,#e6ce99);width:var(--w)}.timeline{position:relative;display:grid;gap:18px}.milestone{display:grid;grid-template-columns:82px 1fr;gap:20px;padding:24px;background:#111923;border:1px solid var(--line)}.milestone-no{font:600 32px 'Space Grotesk';color:var(--gold)}.milestone p{color:var(--muted);margin:8px 0 0}.faq-item{border-bottom:1px solid var(--line);padding:20px 0}.faq-item summary{cursor:pointer;font:600 18px 'Space Grotesk';color:#eee9df}.faq-item p{color:var(--muted);max-width:850px}.notice{padding:18px 20px;border-left:3px solid var(--gold);background:#cbb07810;color:#c9c5bc;font-size:13px}.book-panel{padding:45px;background:linear-gradient(130deg,#1b232c,#10161e);border:1px solid var(--line);text-align:center}.book-icon{font-size:52px;color:var(--gold2)}
+.site-footer{border-top:1px solid var(--line);padding:32px 0 44px;color:#8e8e8c;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{font:700 15px 'Space Grotesk';letter-spacing:.14em;color:var(--gold2)}.legal{max-width:850px;margin-top:20px;line-height:1.7}
+@media(max-width:760px){.header-inner{height:68px}.brand{font-size:18px}.hero{min-height:690px}.hero-art{background-position:52% top;background-size:auto 78%;background-repeat:no-repeat}.hero-content{padding-bottom:44px}.section{padding:65px 0}.grid-2,.grid-3,.stat-grid{grid-template-columns:1fr}.page-hero{padding:70px 0 50px}.page-content{padding:45px 0 75px}.elevator-drawer{padding:20px 18px}.milestone{grid-template-columns:58px 1fr;gap:12px;padding:18px}.milestone-no{font-size:25px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Elevator doors behind the floor selector */
+.floor-list{position:relative;isolation:isolate;padding:22px 16px;gap:12px;border:1px solid #555b;background:linear-gradient(90deg,#656b71 0%,#c8cbd0 8%,#858b91 48%,#d2d4d7 92%,#60666d 100%);box-shadow:inset 0 0 0 5px #555b,inset 0 0 28px #252a30,0 8px 18px #2225}
+.floor-list:before{content:"";position:absolute;z-index:-1;inset:7px;background:linear-gradient(90deg,#737a81 0%,#b9bec3 18%,#8d949b 49.6%,#555d65 50%,#aeb4ba 51%,#d0d3d6 82%,#717980 100%);box-shadow:inset 0 0 22px #20252b,inset 0 0 2px 1px #eef0f2}
+.floor-list:after{content:"";position:absolute;z-index:-1;top:7px;bottom:7px;left:50%;width:2px;transform:translateX(-1px);background:linear-gradient(180deg,#e1e3e5,#50575e 45%,#d5d8db);box-shadow:0 0 7px #fff8}
+.floor-link{position:relative;z-index:1;background:linear-gradient(100deg,#e2e3e4,#aeb3b8 55%,#e0e1e2);border-color:#555b}
+@media(max-width:760px){.floor-list{padding:18px 12px}}
+
+
+/* FLOOR 4 elevator concept: foreground controls, subdued doors, animated floor gauge */
+.elevator-drawer{
+  background:linear-gradient(145deg,#17191d 0%,#090b0e 52%,#1b1715 100%);
+  color:#f2e9d8;
+  border-left:1px solid #8b6336;
+  box-shadow:-24px 0 70px #000d;
+}
+.drawer-top{border-color:#9a713d66}
+.drawer-brand{color:#e5c78f;letter-spacing:.16em}
+.drawer-close{color:#f0dfbd;background:#ffffff0a;border-color:#c69a5a88}
+.drawer-close:hover{background:#a92720;color:#fff;border-color:#f14a3f}
+.panel-label{color:#b99b6b;margin:17px 0 8px}
+.floor-gauge{width:min(100%,330px);margin:0 auto 14px;display:block;filter:drop-shadow(0 4px 9px #000b)}
+.floor-gauge .gauge-arc{fill:none;stroke:#8e7047;stroke-width:5}
+.floor-gauge .gauge-inner{fill:none;stroke:#4c4030;stroke-width:1.5}
+.floor-gauge .gauge-tick{stroke:#d0b17b;stroke-width:1.5}
+.floor-gauge .gauge-number{fill:#d8c39c;font:600 17px 'Space Grotesk',sans-serif;text-anchor:middle}
+.floor-gauge .gauge-number.active{fill:#ff493e;filter:drop-shadow(0 0 5px #f22)}
+.floor-gauge .needle{transform-origin:180px 165px;transition:transform .65s cubic-bezier(.2,.8,.2,1)}
+.floor-gauge .needle line{stroke:#f04438;stroke-width:4;stroke-linecap:round;filter:drop-shadow(0 0 5px #f22)}
+.floor-gauge .needle circle{fill:#d5b77e;stroke:#3b2717;stroke-width:3}
+.drawer-logo{text-align:center;color:#e8d4ac;font:700 19px 'Space Grotesk',sans-serif;letter-spacing:.22em;margin:2px 0 17px;text-shadow:0 2px 12px #d32b2144}
+.floor-list{position:relative;isolation:isolate;padding:18px 14px;gap:11px;border:1px solid #9a7547;background:linear-gradient(90deg,#171a1e,#25272a 48%,#171a1e);box-shadow:0 10px 25px #0009,inset 0 0 0 1px #ffffff0b}
+.floor-list:before{inset:5px;background:linear-gradient(90deg,#24272a 0%,#171a1d 49.5%,#090b0d 50%,#1c1f22 100%);box-shadow:inset 0 0 28px #000d}
+.floor-list:after{top:5px;bottom:5px;background:linear-gradient(180deg,#ffffff20,#0008 45%,#ffffff18);box-shadow:none}
+.floor-link{min-height:56px;gap:13px;padding:7px 12px;border:1px solid #88704e;border-radius:30px;background:linear-gradient(105deg,#36383a,#17191c 58%,#303033);color:#f4ead7;box-shadow:inset 0 1px #ffffff24,0 4px 9px #0009;transition:transform .2s,border-color .2s,box-shadow .2s,background .2s}
+.floor-link:hover,.floor-link:focus-visible{border-color:#ff493e;background:linear-gradient(105deg,#5b2422,#211719 58%,#46201e);box-shadow:inset 0 1px #ffffff35,0 0 0 1px #ed3b32,0 0 22px #e52c25a6;transform:translateX(-3px);outline:none}
+.floor-link.active{border-color:#d84337;background:linear-gradient(105deg,#48201e,#1e1718 58%,#38201e);box-shadow:inset 0 1px #ffffff2a,0 0 0 1px #c6322b88,0 0 14px #d62b2455}
+.floor-number{width:42px;height:42px;flex-basis:42px;border:2px solid #92744c;color:#f1dfbd;background:radial-gradient(circle at 35% 25%,#5b5144,#25211d 72%,#111);box-shadow:inset 0 2px 4px #ffffff20,0 2px 5px #000b}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{border-color:#ff5549;color:#fff;background:radial-gradient(circle at 35% 25%,#f45c50,#8d211c 72%,#3d0c0a);box-shadow:0 0 14px #f33b32, inset 0 1px #ffffff55}
+.floor-name{font-size:12px;letter-spacing:.11em;color:#f1e5d1}
+.drawer-foot{color:#a58b68;margin-top:19px}
+@media(max-width:760px){
+  .elevator-drawer{width:min(420px,100vw);padding:16px 16px calc(18px + env(safe-area-inset-bottom))}
+  .drawer-top{padding-bottom:12px}
+  .panel-label{margin:12px 0 4px;font-size:9px}
+  .floor-gauge{width:min(78vw,290px);margin-bottom:7px}
+  .drawer-logo{font-size:17px;margin:0 0 12px}
+  .floor-list{padding:13px 10px;gap:8px}
+  .floor-link{min-height:49px;padding:5px 10px}
+  .floor-number{width:37px;height:37px;flex-basis:37px;font-size:17px}
+  .floor-name{font-size:11px}
+}
+
+
+/* Refinement after visual review: show the whole elevator, not a generic sidebar */
+.elevator-drawer{
+  width:min(560px,100vw);
+  padding:22px 34px 28px;
+  background:
+    linear-gradient(90deg,transparent 0 8%,#ffffff08 8.2%,transparent 9% 49.5%,#ffffff12 50%,transparent 50.5% 91%,#ffffff08 92%,transparent 93%),
+    linear-gradient(90deg,#202326 0%,#111417 48%,#080a0c 50%,#171a1d 100%);
+}
+.elevator-drawer:before{
+  content:"";
+  position:absolute;z-index:-1;inset:0;
+  background:
+    linear-gradient(90deg,transparent 0 49.6%,#050607 49.8%,#77736b 50%,#08090a 50.3%,transparent 50.5%),
+    repeating-linear-gradient(90deg,transparent 0 86px,#ffffff06 87px,#00000022 90px);
+  box-shadow:inset 0 0 70px #000d;
+  pointer-events:none;
+}
+.drawer-top{position:relative}
+.floor-gauge{width:min(100%,390px);height:auto;max-height:190px;margin:0 auto 2px;overflow:visible}
+.floor-gauge .gauge-arc{stroke:#b18a53;stroke-width:6;filter:drop-shadow(0 0 4px #c18b4744)}
+.floor-gauge .gauge-inner{stroke:#6d583b;stroke-width:1.5}
+.floor-gauge .gauge-tick{stroke:#e1c38d;stroke-width:2}
+.floor-gauge .gauge-number{font-size:18px}
+.drawer-logo{font-size:22px;margin:0 0 18px;letter-spacing:.25em}
+.floor-list{
+  padding:20px 18px;
+  gap:12px;
+  border:1px solid #b38a50;
+  background:
+    linear-gradient(90deg,#343638 0%,#202326 48.5%,#101214 50%,#303235 100%);
+  box-shadow:0 18px 36px #000e,0 0 0 4px #17191b,0 0 0 5px #8e6b3d,inset 0 2px 5px #ffffff26;
+}
+.floor-list:before{
+  inset:6px;
+  background:
+    linear-gradient(90deg,#55585a 0%,#303336 49.5%,#101214 50%,#414447 100%),
+    linear-gradient(180deg,#ffffff16,transparent 20%,#0008 100%);
+  box-shadow:inset 0 0 36px #000e;
+}
+.floor-list:after{top:6px;bottom:6px;background:linear-gradient(180deg,#ffffff40,#111 45%,#ffffff24);width:3px}
+.floor-link{
+  min-height:62px;
+  padding:8px 14px;
+  gap:16px;
+  border:1px solid #b69a70;
+  border-radius:34px;
+  background:linear-gradient(180deg,#66686a 0%,#35383b 13%,#202326 50%,#111315 100%);
+  box-shadow:inset 0 2px 2px #ffffff45,inset 0 -3px 5px #000c,0 5px 10px #000d,0 0 0 1px #08090a;
+}
+.floor-link:hover,.floor-link:focus-visible{
+  background:linear-gradient(180deg,#87352f 0%,#4b201e 24%,#211617 100%);
+  border-color:#ff6257;
+  box-shadow:inset 0 2px 2px #ffffff55,inset 0 -3px 5px #000c,0 0 0 1px #f24a40,0 0 24px #e63830b0;
+  transform:translateY(-1px);
+}
+.floor-link.active{
+  background:linear-gradient(180deg,#73312c 0%,#3b1d1b 28%,#171214 100%);
+  border-color:#e34b40;
+  box-shadow:inset 0 2px 2px #ffffff3b,inset 0 -3px 5px #000c,0 0 0 1px #b9332b,0 0 15px #d8322a66;
+}
+.floor-number{
+  width:46px;height:46px;flex-basis:46px;
+  border:2px solid #c1a16b;
+  color:#fff0d1;
+  font-size:21px;
+  background:radial-gradient(circle at 32% 22%,#b0a18a 0%,#514638 44%,#211b16 76%,#090909 100%);
+  box-shadow:inset 0 3px 5px #fff8,inset 0 -4px 6px #000c,0 3px 7px #000d;
+}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{
+  border-color:#ff766c;
+  background:radial-gradient(circle at 32% 22%,#ff8a7d 0%,#bd342b 48%,#4d100d 100%);
+  box-shadow:inset 0 2px 5px #fff8,0 0 18px #ff3e35;
+}
+.floor-name{font-size:13px;letter-spacing:.13em;text-shadow:0 1px 2px #000}
+.drawer-foot{color:#c0a77f;margin-top:17px}
+@media(max-width:760px){
+ .elevator-drawer{width:100vw;padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
+ .floor-gauge{width:min(88vw,350px);max-height:150px}
+ .drawer-logo{font-size:19px;margin-bottom:12px}
+ .floor-list{padding:13px 12px;gap:8px}
+ .floor-link{min-height:51px;padding:5px 11px}
+ .floor-number{width:39px;height:39px;flex-basis:39px;font-size:18px}
+ .floor-name{font-size:11px}
+}
+
+
+/* Silver vintage elevator exterior — static floor indicator, no dial or needle */
+.elevator-drawer{
+  width:min(520px,100vw);
+  padding:22px 30px 28px;
+  color:#24272a;
+  border-left:1px solid #777d82;
+  background:
+    linear-gradient(90deg,#555b60 0%,#d4d7d9 5%,#aeb3b7 14%,#dfe1e2 49%,#8c9297 50%,#d2d5d7 87%,#666d72 100%);
+  box-shadow:-24px 0 70px #0009,inset 0 0 0 5px #ffffff55,inset 0 0 36px #3338;
+}
+.elevator-drawer:before{
+  content:"";position:absolute;z-index:-1;inset:8px;
+  background:
+    linear-gradient(90deg,#7e858a 0%,#d9dcde 18%,#aeb4b8 49.6%,#555d63 50%,#bfc4c8 50.5%,#e2e4e5 82%,#737a80 100%);
+  box-shadow:inset 0 0 30px #30363b88,inset 0 0 2px 2px #fff;
+  pointer-events:none;
+}
+.elevator-drawer:after{
+  content:"";position:absolute;z-index:-1;inset:8px 50% 8px auto;width:2px;
+  background:linear-gradient(180deg,#f4f5f5,#4d5459 50%,#e9ebec);
+  box-shadow:0 0 9px #fff9;
+  pointer-events:none;
+}
+.drawer-top{border-color:#626a70}
+.drawer-brand{color:#252a2e;text-shadow:0 1px #fff8}
+.drawer-close{color:#252a2e;background:linear-gradient(#f4f5f5,#aeb4b8);border:1px solid #687077;box-shadow:inset 0 1px #fff,0 2px 5px #3335}
+.drawer-close:hover{background:linear-gradient(#f7d5d2,#c94b42);color:#fff;border-color:#8e2620}
+.panel-label{color:#454c51;margin:14px 0 8px;text-shadow:0 1px #fff9}
+.floor-gauge{display:none!important}
+.floor-indicator{
+  width:min(100%,360px);margin:0 auto 14px;padding:10px 14px 12px;
+  border:1px solid #62696e;border-radius:3px;
+  background:linear-gradient(180deg,#292e32,#101316 48%,#343a3f);
+  box-shadow:inset 0 1px 2px #fff5,inset 0 -2px 5px #000c,0 4px 10px #2228;
+}
+.indicator-caption{text-align:center;color:#c5c9cb;font:700 9px 'Space Grotesk';letter-spacing:.24em;margin-bottom:8px}
+.indicator-numbers{display:flex;justify-content:space-between;align-items:center;gap:4px}
+.indicator-number{
+  width:30px;height:30px;display:grid;place-items:center;
+  color:#d9dddf;font:600 15px 'Space Grotesk';
+  border:1px solid #777f85;border-radius:2px;
+  background:linear-gradient(180deg,#4a5156,#1c2125);
+  box-shadow:inset 0 1px #ffffff35,0 2px 3px #0008;
+}
+.indicator-number.missing{border:0;background:transparent;box-shadow:none;color:#8d9295}
+.indicator-number.active{
+  color:#ff5248;border-color:#f15a50;
+  background:linear-gradient(180deg,#48201e,#1c1010);
+  text-shadow:0 0 8px #ff3e35;
+  box-shadow:inset 0 1px #ffffff2a,0 0 10px #e53b3288;
+}
+.drawer-logo{color:#30363a;text-shadow:0 1px #fff9;font-size:21px;margin:0 0 14px}
+.floor-list{
+  padding:18px 16px;gap:11px;
+  border:1px solid #697177;
+  background:linear-gradient(90deg,#858c91 0%,#c6cacc 49.5%,#71797f 50%,#bfc4c7 100%);
+  box-shadow:0 10px 24px #2228,0 0 0 4px #9da3a7,0 0 0 5px #555d62,inset 0 1px 4px #fff;
+}
+.floor-list:before{
+  inset:6px;
+  background:
+    linear-gradient(90deg,#aeb4b8 0%,#d9dcde 49.6%,#747c82 50%,#c4c9cc 100%);
+  box-shadow:inset 0 0 24px #43494e66;
+}
+.floor-list:after{top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,#f4f5f5,#5c646a 50%,#f4f5f5);box-shadow:none}
+.floor-link{
+  min-height:58px;padding:7px 13px;gap:14px;
+  color:#24292d;border:1px solid #777f84;border-radius:30px;
+  background:linear-gradient(180deg,#f0f1f1 0%,#c5c9cb 42%,#969da2 100%);
+  box-shadow:inset 0 2px 2px #fff, inset 0 -2px 4px #5557,0 4px 7px #3338;
+}
+.floor-link:hover,.floor-link:focus-visible{
+  color:#25282b;border-color:#c43d34;
+  background:linear-gradient(180deg,#f7f0ed,#d6b5b2 55%,#a98986);
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #d74a40,0 0 17px #e43a32a6;
+  transform:translateY(-1px);outline:none;
+}
+.floor-link.active{
+  color:#25282b;border-color:#a93a32;
+  background:linear-gradient(180deg,#f1e2df,#d3b4b0 55%,#a88b87);
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #c8453c,0 0 12px #d43c3477;
+}
+.floor-number{
+  width:44px;height:44px;flex-basis:44px;
+  color:#30363a;border:2px solid #7d858a;
+  background:radial-gradient(circle at 32% 22%,#fff 0%,#c5cacc 48%,#777f84 100%);
+  box-shadow:inset 0 2px 4px #fff, inset 0 -3px 5px #5558,0 2px 5px #3337;
+}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{
+  color:#fff;border-color:#bd3d35;
+  background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#c54a42 50%,#6d1e1a 100%);
+  box-shadow:inset 0 2px 4px #fff8,0 0 12px #e64036;
+}
+.floor-name{color:#252a2e;text-shadow:0 1px #fff8}
+.drawer-foot{color:#3f464b;text-shadow:0 1px #fff8}
+@media(max-width:760px){
+ .elevator-drawer{width:100vw;padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
+ .floor-indicator{width:min(100%,330px);margin-bottom:10px;padding:8px 10px}
+ .indicator-number{width:27px;height:27px;font-size:13px}
+ .drawer-logo{font-size:18px;margin-bottom:10px}
+ .floor-list{padding:13px 11px;gap:8px}
+ .floor-link{min-height:50px;padding:5px 10px}
+ .floor-number{width:38px;height:38px;flex-basis:38px;font-size:17px}
+ .floor-name{font-size:11px}
+}
+
+
+/* FLOOR 4 visual pass — cinematic backgrounds and vintage silver elevator */
+:root{--bg:#080c12;--panel:#111820;--panel2:#1a242d}
+body{background:radial-gradient(ellipse at 12% 8%,rgba(80,103,122,.16),transparent 34rem),radial-gradient(ellipse at 88% 42%,rgba(130,91,48,.10),transparent 38rem),linear-gradient(180deg,#080c12 0%,#0b1118 48%,#080c12 100%)}
+.section{position:relative;background:linear-gradient(180deg,rgba(15,22,30,.35),rgba(7,11,16,.12))}
+.section:nth-of-type(even){background:linear-gradient(115deg,rgba(26,35,44,.52),rgba(8,13,19,.3))}
+.surface,.stat,.milestone,.book-panel{backdrop-filter:blur(5px);background:linear-gradient(145deg,rgba(27,38,49,.92),rgba(12,18,25,.96));box-shadow:0 16px 40px #0004}
+.page-hero{background:linear-gradient(90deg,rgba(7,11,16,.94),rgba(7,11,16,.70)),radial-gradient(ellipse at 76% 28%,rgba(184,137,72,.18),transparent 38%),url('../assets/floor4-city.svg') center 38%/cover no-repeat,linear-gradient(135deg,#17212b,#090d13 72%)}
+.page-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,#080c12 100%);pointer-events:none}
+.page-hero>*{position:relative;z-index:1}
+.hero-art{background-image:linear-gradient(180deg,rgba(5,8,13,.02) 18%,rgba(5,8,13,.22) 58%,#090d13 100%),url('../assets/floor4-city.svg')}
+.elevator-drawer{width:min(520px,100vw);padding:20px 28px 28px;color:#24282b;border-left:1px solid #727a80;background:linear-gradient(180deg,rgba(12,15,18,.10),rgba(10,13,16,.30)),linear-gradient(90deg,#72797e,#d8dbdd 12%,#aeb4b8 49%,#6f777d 50%,#d4d7d9 88%,#72797e);box-shadow:-24px 0 70px #000b,inset 0 0 0 5px #ffffff55,inset 0 0 40px #252a2e66}
+.elevator-drawer:before{content:"";position:absolute;z-index:-1;inset:9px;background:linear-gradient(90deg,transparent 0 49.65%,#4a5156 49.8%,#f0f1f1 50%,#555d62 50.25%,transparent 50.45%),linear-gradient(180deg,#d9dcde 0%,#9ba2a7 18%,#c9cdd0 52%,#7e868c 100%);box-shadow:inset 0 0 34px #2229,inset 0 1px 2px #fff;pointer-events:none}
+.elevator-drawer:after{content:"";position:absolute;z-index:-1;inset:9px 50% 9px auto;width:2px;background:linear-gradient(180deg,#fff,#5c646a 50%,#fff);pointer-events:none}
+.drawer-top{border-color:#626a70}.drawer-brand{color:#262c30;text-shadow:0 1px #fff9;letter-spacing:.16em}
+.drawer-close{color:#252a2e;background:linear-gradient(#f4f5f5,#aeb4b8);border:1px solid #687077;box-shadow:inset 0 1px #fff,0 2px 5px #3335}
+.panel-label{color:#424a50;text-shadow:0 1px #fff9}
+.floor-indicator{width:min(100%,360px);padding:10px 13px 12px;margin:14px auto 12px;border:5px ridge #8d9498;border-radius:2px;background:linear-gradient(180deg,#4b5155,#171b1e 50%,#454b4f);box-shadow:inset 0 2px 5px #000c,0 5px 12px #0007}
+.indicator-caption{color:#d4d7d8;font-size:8px;letter-spacing:.28em}.indicator-numbers{justify-content:center;gap:5px}
+.indicator-number{width:34px;height:37px;border:1px solid #8a8170;border-radius:1px;color:#29251d;font:700 19px Georgia,serif;background:linear-gradient(180deg,#fff8dc,#d9cfad 50%,#f6edcf);box-shadow:inset 0 1px #fff,0 1px 3px #0009}
+.indicator-number.missing{color:#a49b83}.indicator-number.active{color:#9c211b;background:linear-gradient(180deg,#fff4d7,#d8c59a);border-color:#b38b4f;text-shadow:none;box-shadow:inset 0 1px #fff,0 0 8px #d6b87888}
+.drawer-logo{color:#30363a;text-shadow:0 1px #fff9;font-size:20px;margin:0 0 12px}
+.floor-list{padding:18px 16px;gap:10px;border:1px solid #697177;border-radius:3px;background:linear-gradient(90deg,#858c91 0%,#c6cacc 49.5%,#71797f 50%,#bfc4c7 100%);box-shadow:0 10px 24px #2228,0 0 0 4px #9da3a7,0 0 0 5px #555d62,inset 0 1px 4px #fff}
+.floor-list:before{inset:6px;background:linear-gradient(90deg,#aeb4b8 0%,#d9dcde 49.6%,#747c82 50%,#c4c9cc 100%);box-shadow:inset 0 0 24px #43494e66}
+.floor-list:after{top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,#f4f5f5,#5c646a 50%,#f4f5f5);box-shadow:none}
+.floor-link{min-height:55px;padding:6px 12px;gap:13px;border:1px solid #777f84;border-radius:30px;color:#24292d;background:linear-gradient(180deg,#f0f1f1 0%,#c5c9cb 42%,#969da2 100%);box-shadow:inset 0 2px 2px #fff,inset 0 -2px 4px #5557,0 4px 7px #3338}
+.floor-link:hover,.floor-link:focus-visible{color:#25282b;border-color:#c43d34;background:linear-gradient(180deg,#f7f0ed,#d6b5b2 55%,#a98986);box-shadow:inset 0 2px 2px #fff,0 0 0 1px #d74a40,0 0 17px #e43a32a6;transform:translateY(-1px);outline:none}
+.floor-link.active{color:#25282b;border-color:#a93a32;background:linear-gradient(180deg,#f1e2df,#d3b4b0 55%,#a88b87);box-shadow:inset 0 2px 2px #fff,0 0 0 1px #c8453c,0 0 12px #d43c3477}
+.floor-number{width:42px;height:42px;flex-basis:42px;color:#30363a;border:2px solid #7d858a;background:radial-gradient(circle at 32% 22%,#fff 0%,#c5cacc 48%,#777f84 100%);box-shadow:inset 0 2px 4px #fff,inset 0 -3px 5px #5558,0 2px 5px #3337}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{color:#fff;border-color:#bd3d35;background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#c54a42 50%,#6d1e1a 100%);box-shadow:inset 0 2px 4px #fff8,0 0 12px #e64036}
+.floor-name{color:#252a2e;text-shadow:0 1px #fff8}.drawer-foot{color:#3f464b;text-shadow:0 1px #fff8}
+@media(max-width:760px){.elevator-drawer{width:100vw;padding:14px 16px calc(16px + env(safe-area-inset-bottom))}.floor-indicator{width:min(100%,330px);padding:8px 9px;margin:10px auto}.indicator-number{width:29px;height:32px;font-size:16px}.drawer-logo{font-size:18px}.floor-list{padding:13px 11px;gap:8px}.floor-link{min-height:49px;padding:5px 9px}.floor-number{width:37px;height:37px;flex-basis:37px;font-size:17px}}
+
+
+/* Remove the floor indicator completely — keep only the vintage elevator doors and buttons. */
+.floor-indicator,.floor-gauge{display:none!important}
+.panel-label{font-size:0;margin:8px 0 12px}
+.panel-label:after{content:'SELECT A FLOOR';font-size:10px;letter-spacing:.24em}
+
+/* Elevator menu: timber background and prominent brushed-silver destination buttons. */
+@media(max-width:520px){.elevator-drawer{padding:18px 16px 24px}.floor-link{min-height:59px;padding:8px 20px}.floor-name{font-size:12px}.floor-list{gap:10px}}
+
+/* Restored verbatim original silver oval button styling and red hover/active glow. */
+.floor-link{min-height:55px;padding:6px 12px;gap:13px;border:1px solid #777f84;border-radius:30px;color:#24292d;background:linear-gradient(180deg,#f0f1f1 0%,#c5c9cb 42%,#969da2 100%);box-shadow:inset 0 2px 2px #fff,inset 0 -2px 4px #5557,0 4px 7px #3338}
+.floor-link:hover,.floor-link:focus-visible{color:#25282b;border-color:#c43d34;background:linear-gradient(180deg,#f7f0ed,#d6b5b2 55%,#a98986);box-shadow:inset 0 2px 2px #fff,0 0 0 1px #d74a40,0 0 17px #e43a32a6;transform:translateY(-1px);outline:none}
+.floor-link.active{color:#25282b;border-color:#a93a32;background:linear-gradient(180deg,#f1e2df,#d3b4b0 55%,#a88b87);box-shadow:inset 0 2px 2px #fff,0 0 0 1px #c8453c,0 0 12px #d43c3477}
+.floor-number{width:42px;height:42px;flex-basis:42px;color:#30363a;border:2px solid #7d858a;background:radial-gradient(circle at 32% 22%,#fff 0%,#c5cacc 48%,#777f84 100%);box-shadow:inset 0 2px 4px #fff,inset 0 -3px 5px #5558,0 2px 5px #3337}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{color:#fff;border-color:#bd3d35;background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#c54a42 50%,#6d1e1a 100%);box-shadow:inset 0 2px 4px #fff8,0 0 12px #e64036}
+.floor-name{color:#252a2e;text-shadow:0 1px #fff8}.drawer-foot{color:#3f464b;text-shadow:0 1px #fff8}
+
+
+/* FLOOR 4 — cinematic backgrounds for the inner pages.
+   Shared visual language: night architecture, missing-floor negative space,
+   muted antique gold, atmospheric haze and restrained reflections. */
+.page-hero{isolation:isolate;min-height:290px;padding:clamp(76px,9vw,112px) 0 76px;background:#090d13!important;overflow:hidden}
+.page-hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,8,13,.96) 0%,rgba(5,8,13,.78) 48%,rgba(5,8,13,.3) 100%),url('../assets/floor4-city.svg') center 42%/cover no-repeat;opacity:.88}
+.page-hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,transparent 55%,#090d13 100%),radial-gradient(ellipse at 78% 34%,rgba(213,180,119,.18),transparent 34%)}
+.page-hero .section-kicker{color:#d5b477}
+.page-hero h1{text-shadow:0 5px 28px #000}
+.page-content{position:relative;isolation:isolate;overflow:hidden;background:#090d13!important}
+.page-content:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.36;background:radial-gradient(ellipse at 78% 12%,rgba(74,91,111,.2),transparent 42%),linear-gradient(180deg,rgba(9,13,19,.2),#090d13 82%)}
+.page-content>.wrap{position:relative;z-index:1}
+.page-content .surface,.page-content .stat,.page-content .milestone,.page-content .book-panel,.page-content .faq-item{background:linear-gradient(145deg,rgba(27,34,44,.94),rgba(12,17,25,.97));border-color:rgba(213,180,119,.2);box-shadow:0 18px 46px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.035)}
+.page-content .notice{background:linear-gradient(110deg,rgba(213,180,119,.10),rgba(17,24,33,.72));border-color:rgba(213,180,119,.34)}
+/* Tokenomics: a night tower facade with fine floor divisions and a missing fourth level. */
+.page-tokenomics .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.72) 55%,rgba(5,8,13,.24)),url('../assets/floor4-city.svg') 67% 38%/cover no-repeat}
+.page-tokenomics .page-content:before{opacity:.5;background:repeating-linear-gradient(0deg,transparent 0 82px,rgba(213,180,119,.08) 83px,transparent 84px),linear-gradient(90deg,transparent 0 68%,rgba(213,180,119,.06) 68.1%,transparent 68.3%),radial-gradient(ellipse at 82% 8%,rgba(70,96,120,.25),transparent 45%)}
+/* Presale: closed elevator doors, brushed-metal seams and a narrow warm light at the threshold. */
+.page-presale .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.96),rgba(5,8,13,.75) 52%,rgba(5,8,13,.38)),linear-gradient(90deg,transparent 0 71%,rgba(164,174,184,.15) 71.1%,rgba(8,12,17,.2) 71.5%,transparent 72%),url('../assets/floor4-city.svg') 72% 40%/cover no-repeat}
+.page-presale .page-content:before{opacity:.48;background:linear-gradient(90deg,transparent 0 72%,rgba(174,184,194,.07) 72.1%,transparent 72.4%),linear-gradient(180deg,transparent 0 80%,rgba(213,180,119,.12) 100%),radial-gradient(ellipse at 80% 90%,rgba(213,180,119,.16),transparent 34%)}
+/* Roadmap: architectural floor plan / blueprint lines, like a route through the building. */
+.page-roadmap .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.74) 56%,rgba(5,8,13,.34)),url('../assets/floor4-city.svg') 70% 42%/cover no-repeat}
+.page-roadmap .page-content:before{opacity:.55;background:repeating-linear-gradient(0deg,transparent 0 54px,rgba(213,180,119,.075) 55px,transparent 56px),repeating-linear-gradient(90deg,transparent 0 78px,rgba(213,180,119,.06) 79px,transparent 80px),radial-gradient(ellipse at 84% 18%,rgba(66,101,126,.2),transparent 44%)}
+/* Whitepaper: quiet architectural drafting grid and technical depth. */
+.page-whitepaper .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.78) 58%,rgba(5,8,13,.3)),url('../assets/floor4-city.svg') center 36%/cover no-repeat}
+.page-whitepaper .page-content:before{opacity:.38;background:repeating-linear-gradient(0deg,transparent 0 96px,rgba(213,180,119,.07) 97px,transparent 98px),repeating-linear-gradient(90deg,transparent 0 96px,rgba(213,180,119,.055) 97px,transparent 98px),radial-gradient(ellipse at 76% 20%,rgba(80,102,126,.22),transparent 48%)}
+/* Community: distant city lights, warm windows and a shared night skyline. */
+.page-community .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.96),rgba(5,8,13,.68) 52%,rgba(5,8,13,.26)),url('../assets/floor4-city.svg') 64% 42%/cover no-repeat}
+.page-community .page-content:before{opacity:.52;background:radial-gradient(circle at 15% 20%,rgba(213,180,119,.18) 0 1px,transparent 3px),radial-gradient(circle at 35% 46%,rgba(213,180,119,.14) 0 1px,transparent 3px),radial-gradient(circle at 76% 22%,rgba(213,180,119,.16) 0 1px,transparent 3px),radial-gradient(circle at 88% 65%,rgba(213,180,119,.13) 0 1px,transparent 3px),radial-gradient(ellipse at 70% 8%,rgba(65,92,119,.25),transparent 50%)}
+/* FAQ: dim corridor depth and subtle pools of light, without distracting from answers. */
+.page-faq .page-hero:before{background:linear-gradient(90deg,rgba(5,8,13,.97),rgba(5,8,13,.78) 56%,rgba(5,8,13,.32)),url('../assets/floor4-city.svg') 70% 40%/cover no-repeat}
+.page-faq .page-content:before{opacity:.44;background:linear-gradient(90deg,transparent 0 12%,rgba(213,180,119,.05) 12.1%,transparent 12.3%,transparent 87%,rgba(213,180,119,.05) 87.1%,transparent 87.3%),radial-gradient(ellipse at 50% 0%,rgba(213,180,119,.12),transparent 38%),linear-gradient(180deg,rgba(22,30,40,.28),transparent 65%)}
+@media(max-width:760px){.page-hero{min-height:250px;padding:72px 0 54px}.page-hero:before{background-position:58% center;background-size:auto 100%}.page-content:before{opacity:.28}}
+
+
+/* Corrected inner-page backdrop: reuse the approved FLOOR 4 city artwork,
+   with the central missing-floor tower and the four elemental towers visible. */
+body.page-tokenomics,body.page-presale,body.page-roadmap,body.page-whitepaper,body.page-community,body.page-faq{
+ position:relative;
+ background:#080c12!important;
+}
+body.page-tokenomics:before,body.page-presale:before,body.page-roadmap:before,body.page-whitepaper:before,body.page-community:before,body.page-faq:before{
+ content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background-image:linear-gradient(180deg,rgba(5,8,13,.48),rgba(5,8,13,.72) 65%,rgba(5,8,13,.9)),url('../assets/floor4-city.svg');
+ background-repeat:no-repeat;
+ background-position:center center;
+ background-size:cover;
+ opacity:.78;
+}
+body.page-tokenomics .page-hero,body.page-presale .page-hero,body.page-roadmap .page-hero,body.page-whitepaper .page-hero,body.page-community .page-hero,body.page-faq .page-hero{
+ background:linear-gradient(90deg,rgba(5,8,13,.68),rgba(5,8,13,.3) 55%,rgba(5,8,13,.55))!important;
+ border-bottom:1px solid rgba(213,180,119,.22);
+}
+body.page-tokenomics .page-hero:before,body.page-presale .page-hero:before,body.page-roadmap .page-hero:before,body.page-whitepaper .page-hero:before,body.page-community .page-hero:before,body.page-faq .page-hero:before{content:none!important}
+body.page-tokenomics .page-content,body.page-presale .page-content,body.page-roadmap .page-content,body.page-whitepaper .page-content,body.page-community .page-content,body.page-faq .page-content{
+ background:linear-gradient(180deg,rgba(8,12,18,.32),rgba(8,12,18,.72))!important;
+}
+body.page-tokenomics .page-content:before,body.page-presale .page-content:before,body.page-roadmap .page-content:before,body.page-whitepaper .page-content:before,body.page-community .page-content:before,body.page-faq .page-content:before{
+ background:radial-gradient(ellipse at 50% 0%,rgba(213,180,119,.08),transparent 45%)!important;opacity:1!important;
+}
+
+/* RESET INNER PAGE BACKGROUNDS — clean baseline before redesign */
+body.page-tokenomics,body.page-presale,body.page-roadmap,body.page-whitepaper,body.page-community,body.page-faq{
+  background:#090d13!important;
+}
+body.page-tokenomics:before,body.page-presale:before,body.page-roadmap:before,body.page-whitepaper:before,body.page-community:before,body.page-faq:before{
+  content:none!important;
+  display:none!important;
+}
+body.page-tokenomics .page-hero,body.page-presale .page-hero,body.page-roadmap .page-hero,body.page-whitepaper .page-hero,body.page-community .page-hero,body.page-faq .page-hero{
+  background:#0d131c!important;
+  border-bottom:1px solid rgba(203,176,120,.24);
+}
+body.page-tokenomics .page-hero:before,body.page-presale .page-hero:before,body.page-roadmap .page-hero:before,body.page-whitepaper .page-hero:before,body.page-community .page-hero:before,body.page-faq .page-hero:before,
+body.page-tokenomics .page-hero:after,body.page-presale .page-hero:after,body.page-roadmap .page-hero:after,body.page-whitepaper .page-hero:after,body.page-community .page-hero:after,body.page-faq .page-hero:after{
+  content:none!important;
+  display:none!important;
+}
+body.page-tokenomics .page-content,body.page-presale .page-content,body.page-roadmap .page-content,body.page-whitepaper .page-content,body.page-community .page-content,body.page-faq .page-content{
+  background:#090d13!important;
+}
+body.page-tokenomics .page-content:before,body.page-presale .page-content:before,body.page-roadmap .page-content:before,body.page-whitepaper .page-content:before,body.page-community .page-content:before,body.page-faq .page-content:before{
+  content:none!important;
+  display:none!important;
+}
+
+/* Remove old homepage hero artwork too — clean slate for a new background design */
+.hero-art{display:none!important}
+.hero{background:#090d13!important}
+
+
+/* FLOOR 4 brand atmosphere — The Missing Floor */
+:root{
+  --bg:#080d15;
+  --panel:rgba(14,21,31,.90);
+  --panel2:rgba(20,29,41,.92);
+  --text:#f1eee7;
+  --muted:#a9a7a1;
+  --gold:#cbb078;
+  --gold2:#ead5a5;
+  --red:#e33b30;
+  --line:rgba(203,176,120,.24);
+  --silver:#b9c4cf;
+}
+
+/* Shared city backdrop: central tower / absent fourth floor / four elements.
+   Keep the artwork visible behind content without competing with readability. */
+body.page-tokenomics,body.page-presale,body.page-roadmap,body.page-whitepaper,body.page-community,body.page-faq{
+  background:#080d15!important;
+}
+body.page-tokenomics:before,body.page-presale:before,body.page-roadmap:before,body.page-whitepaper:before,body.page-community:before,body.page-faq:before{
+  content:"";
+  display:block!important;
+  position:fixed;
+  inset:78px 0 0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(5,8,13,.28) 0%,rgba(5,8,13,.58) 45%,rgba(5,8,13,.88) 100%),
+    linear-gradient(90deg,rgba(5,8,13,.58),rgba(5,8,13,.12) 48%,rgba(5,8,13,.58)),
+    url('../assets/floor4-city.svg') center 34%/cover no-repeat;
+  opacity:.92;
+}
+body.page-tokenomics .site-header,body.page-presale .site-header,body.page-roadmap .site-header,body.page-whitepaper .site-header,body.page-community .site-header,body.page-faq .site-header{
+  position:sticky;z-index:30;
+}
+body.page-tokenomics main,body.page-presale main,body.page-roadmap main,body.page-whitepaper main,body.page-community main,body.page-faq main,
+body.page-tokenomics .site-footer,body.page-presale .site-footer,body.page-roadmap .site-footer,body.page-whitepaper .site-footer,body.page-community .site-footer,body.page-faq .site-footer{
+  position:relative;z-index:1;
+}
+body.page-tokenomics .page-hero,body.page-presale .page-hero,body.page-roadmap .page-hero,body.page-whitepaper .page-hero,body.page-community .page-hero,body.page-faq .page-hero{
+  min-height:310px;
+  background:linear-gradient(180deg,rgba(7,11,17,.28),rgba(7,11,17,.42))!important;
+  border-bottom:1px solid rgba(203,176,120,.22);
+}
+body.page-tokenomics .page-hero:before,body.page-presale .page-hero:before,body.page-roadmap .page-hero:before,body.page-whitepaper .page-hero:before,body.page-community .page-hero:before,body.page-faq .page-hero:before,
+body.page-tokenomics .page-hero:after,body.page-presale .page-hero:after,body.page-roadmap .page-hero:after,body.page-whitepaper .page-hero:after,body.page-community .page-hero:after,body.page-faq .page-hero:after{
+  content:none!important;display:none!important;
+}
+body.page-tokenomics .page-content,body.page-presale .page-content,body.page-roadmap .page-content,body.page-whitepaper .page-content,body.page-community .page-content,body.page-faq .page-content{
+  background:linear-gradient(180deg,rgba(8,13,21,.48),rgba(8,13,21,.78) 42%,rgba(8,13,21,.92))!important;
+}
+body.page-tokenomics .page-content:before,body.page-presale .page-content:before,body.page-roadmap .page-content:before,body.page-whitepaper .page-content:before,body.page-community .page-content:before,body.page-faq .page-content:before{
+  content:none!important;display:none!important;
+}
+
+/* HOME: restore the approved original city artwork as the hero scene. */
+.hero{background:#080d15!important}
+.hero-art{
+  display:block!important;
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(180deg,rgba(5,8,13,.08) 24%,rgba(5,8,13,.20) 54%,rgba(5,8,13,.82) 100%),
+    url('../assets/floor4-city.svg')!important;
+  background-position:center top!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+}
+
+/* Shared brand surfaces: antique gold details, deep shadow, restrained red accent. */
+.page-content .surface,.page-content .stat,.page-content .milestone,.page-content .book-panel,.page-content .faq-item{
+  background:linear-gradient(145deg,rgba(19,28,40,.94),rgba(8,13,21,.96))!important;
+  border-color:rgba(203,176,120,.25)!important;
+  box-shadow:0 18px 46px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.035);
+}
+.page-content .tag,.page-content .section-kicker{color:var(--gold2)}
+.page-content .notice{
+  background:rgba(203,176,120,.08)!important;
+  border-left-color:var(--gold)!important;
+}
+.page-hero h1,.hero h1{text-shadow:0 5px 30px rgba(0,0,0,.82)}
+@media(max-width:760px){
+  body.page-tokenomics:before,body.page-presale:before,body.page-roadmap:before,body.page-whitepaper:before,body.page-community:before,body.page-faq:before{
+    inset:68px 0 0;
+    background-position:54% top;
+    background-size:auto 82%;
+    opacity:.78;
+  }
+  .hero-art{background-position:54% top!important;background-size:auto 78%!important;background-repeat:no-repeat!important}
+}
+
+/* RESTORE APPROVED VINTAGE OVAL SILVER FLOOR BUTTONS — source: commit 94cf1bf */
+.floor-list{
+  padding:18px 16px;
+  gap:10px;
+  border:1px solid #697177;
+  border-radius:3px;
+  background:linear-gradient(90deg,#858c91 0%,#c6cacc 49.5%,#71797f 50%,#bfc4c7 100%);
+  box-shadow:0 10px 24px #2228,0 0 0 4px #9da3a7,0 0 0 5px #555d62,inset 0 1px 4px #fff;
+}
+.floor-list:before{
+  inset:6px;
+  background:linear-gradient(90deg,#aeb4b8 0%,#d9dcde 49.6%,#747c82 50%,#c4c9cc 100%);
+  box-shadow:inset 0 0 24px #43494e66;
+}
+.floor-list:after{
+  top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,#f4f5f5,#5c646a 50%,#f4f5f5);
+  box-shadow:none;
+}
+.floor-link{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  min-height:55px;
+  padding:6px 12px;
+  border:1px solid #777f84;
+  border-radius:999px!important;
+  color:#24292d!important;
+  background:linear-gradient(180deg,#f0f1f1 0%,#c5c9cb 42%,#969da2 100%)!important;
+  box-shadow:inset 0 2px 2px #fff,inset 0 -2px 4px #5557,0 4px 7px #3338!important;
+  transform:none;
+}
+.floor-link:hover,.floor-link:focus-visible{
+  color:#25282b!important;
+  border-color:#c43d34!important;
+  background:linear-gradient(180deg,#f7f0ed,#d6b5b2 55%,#a98986)!important;
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #d74a40,0 0 17px #e43a32a6!important;
+  transform:translateY(-1px);
+  outline:none;
+}
+.floor-link.active{
+  color:#25282b!important;
+  border-color:#a93a32!important;
+  background:linear-gradient(180deg,#f1e2df,#d3b4b0 55%,#a88b87)!important;
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #c8453c,0 0 12px #d43c3477!important;
+}
+.floor-number{
+  width:42px;height:42px;flex:0 0 42px;
+  color:#30363a!important;
+  border:2px solid #7d858a!important;
+  border-radius:50%;
+  background:radial-gradient(circle at 32% 22%,#fff 0%,#c5cacc 48%,#777f84 100%)!important;
+  box-shadow:inset 0 2px 4px #fff,inset 0 -3px 5px #5558,0 2px 5px #3337!important;
+}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{
+  color:#fff!important;
+  border-color:#bd3d35!important;
+  background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#c54a42 50%,#6d1e1a 100%)!important;
+  box-shadow:inset 0 2px 4px #fff8,0 0 12px #e64036!important;
+}
+.floor-name{
+  color:#252a2e!important;
+  text-shadow:0 1px #fff8;
+  font:700 12px 'Space Grotesk',sans-serif;
+  letter-spacing:.11em;
+}
+@media(max-width:760px){
+  .floor-list{padding:13px 11px;gap:8px}
+  .floor-link{min-height:49px;padding:5px 9px}
+  .floor-number{width:37px;height:37px;flex-basis:37px;font-size:17px}
+}
+
+/* BACKGROUND REMOVED AGAIN — keep the approved elevator buttons untouched */
+body.page-tokenomics,body.page-presale,body.page-roadmap,body.page-whitepaper,body.page-community,body.page-faq{
+  background:#090d13!important;
+}
+body.page-tokenomics:before,body.page-presale:before,body.page-roadmap:before,body.page-whitepaper:before,body.page-community:before,body.page-faq:before{
+  content:none!important;display:none!important;background:none!important;
+}
+body.page-tokenomics .page-hero,body.page-presale .page-hero,body.page-roadmap .page-hero,body.page-whitepaper .page-hero,body.page-community .page-hero,body.page-faq .page-hero{
+  background:#0d131c!important;
+}
+body.page-tokenomics .page-hero:before,body.page-presale .page-hero:before,body.page-roadmap .page-hero:before,body.page-whitepaper .page-hero:before,body.page-community .page-hero:before,body.page-faq .page-hero:before,
+body.page-tokenomics .page-hero:after,body.page-presale .page-hero:after,body.page-roadmap .page-hero:after,body.page-whitepaper .page-hero:after,body.page-community .page-hero:after,body.page-faq .page-hero:after,
+body.page-tokenomics .page-content:before,body.page-presale .page-content:before,body.page-roadmap .page-content:before,body.page-whitepaper .page-content:before,body.page-community .page-content:before,body.page-faq .page-content:before{
+  content:none!important;display:none!important;background:none!important;
+}
+body.page-tokenomics .page-content,body.page-presale .page-content,body.page-roadmap .page-content,body.page-whitepaper .page-content,body.page-community .page-content,body.page-faq .page-content{
+  background:#090d13!important;
+}
+.hero-art{display:none!important;background:none!important}
+.hero{background:#090d13!important}
+
+
+/* FINAL MENU REFINEMENT — compact drawer, no elevator-door backdrop.
+   Keep the approved silver oval floor buttons and their red hover/active glow. */
+.elevator-drawer{
+  width:min(390px,92vw);
+  padding:20px 22px 24px;
+  color:var(--text);
+  border-left:1px solid rgba(203,176,120,.28);
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(75,101,126,.30),transparent 48%),
+    linear-gradient(145deg,#172332 0%,#101923 58%,#0c131d 100%);
+  box-shadow:-20px 0 55px rgba(0,0,0,.58),inset 1px 0 rgba(255,255,255,.035);
+}
+.elevator-drawer:before,
+.elevator-drawer:after,
+.floor-list:before,
+.floor-list:after{
+  content:none!important;
+  display:none!important;
+}
+.drawer-top{
+  padding-bottom:13px;
+  border-color:rgba(203,176,120,.22);
+}
+.drawer-brand{
+  color:var(--gold2);
+  font-size:18px;
+  letter-spacing:.14em;
+  text-shadow:none;
+}
+.drawer-close{
+  width:34px;height:34px;
+  color:var(--gold2);
+  border:1px solid rgba(203,176,120,.38);
+  background:rgba(255,255,255,.045);
+  box-shadow:none;
+}
+.drawer-close:hover{
+  color:#fff;
+  border-color:var(--red);
+  background:rgba(227,59,48,.22);
+}
+.panel-label{
+  color:#c4ad83;
+  margin:14px 0 8px;
+  text-shadow:none;
+}
+.drawer-logo,.floor-gauge,.floor-indicator{display:none!important}
+.floor-list{
+  width:100%;
+  max-width:340px;
+  margin:0 auto;
+  padding:12px 11px;
+  gap:8px;
+  border:1px solid rgba(203,176,120,.24);
+  border-radius:8px;
+  background:linear-gradient(145deg,rgba(28,40,54,.74),rgba(12,19,29,.78));
+  box-shadow:0 12px 28px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.035);
+}
+.floor-link{
+  min-height:48px;
+  gap:11px;
+  padding:5px 10px;
+}
+.floor-number{
+  width:36px;height:36px;flex-basis:36px;
+  font-size:17px;
+}
+.floor-name{font-size:11px;letter-spacing:.10em}
+.drawer-foot{
+  margin-top:15px;
+  color:#b8a27e;
+  font-size:9px;
+}
+@media(max-width:760px){
+  .elevator-drawer{
+    width:min(370px,92vw);
+    padding:16px 16px calc(18px + env(safe-area-inset-bottom));
+  }
+  .floor-list{padding:10px 9px;gap:7px}
+  .floor-link{min-height:46px;padding:4px 9px}
+  .floor-number{width:34px;height:34px;flex-basis:34px;font-size:16px}
+}
+
+
+/* SITE BACKGROUND — richer colour, soft organic light and no hard geometry.
+   Atmospheric colour stays behind the content; approved menu/button styling is untouched. */
+body{
+  position:relative;
+  isolation:isolate;
+  background:#080d17!important;
+}
+body:before{
+  content:"";
+  position:fixed;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 58% 46% at 12% 18%,rgba(24,91,151,.34),transparent 72%),
+    radial-gradient(ellipse 52% 48% at 88% 24%,rgba(108,48,92,.25),transparent 72%),
+    radial-gradient(ellipse 62% 48% at 55% 78%,rgba(17,91,105,.24),transparent 74%),
+    radial-gradient(ellipse 34% 30% at 82% 88%,rgba(160,91,39,.18),transparent 72%),
+    linear-gradient(145deg,#0b1727 0%,#101522 42%,#090e19 100%);
+  filter:saturate(1.18);
+}
+.hero{
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse 58% 65% at 18% 30%,rgba(27,104,166,.38),transparent 72%),
+    radial-gradient(ellipse 46% 58% at 82% 22%,rgba(135,54,92,.27),transparent 72%),
+    radial-gradient(ellipse 55% 48% at 56% 85%,rgba(20,111,117,.22),transparent 74%),
+    linear-gradient(145deg,#0c1a2b 0%,#111522 55%,#090e18 100%)!important;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:-12%;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 34% 22% at 26% 34%,rgba(75,157,206,.17),transparent 75%),
+    radial-gradient(ellipse 28% 30% at 75% 46%,rgba(194,112,69,.12),transparent 75%);
+  filter:blur(34px);
+}
+.hero-content{z-index:1}
+.page-hero{
+  background:
+    radial-gradient(ellipse 65% 110% at 82% 10%,rgba(42,111,157,.30),transparent 72%),
+    radial-gradient(ellipse 48% 95% at 12% 20%,rgba(133,54,91,.19),transparent 72%),
+    linear-gradient(145deg,rgba(17,31,48,.92),rgba(9,14,24,.92))!important;
+}
+.page-content{
+  background:
+    radial-gradient(ellipse 60% 38% at 82% 0%,rgba(20,92,111,.10),transparent 75%),
+    linear-gradient(180deg,rgba(8,13,23,.20),rgba(8,13,23,.48))!important;
+}
+.section{
+  position:relative;
+  background:linear-gradient(180deg,rgba(8,13,23,.06),rgba(8,13,23,.20));
+}
+.surface,.stat,.milestone,.book-panel{
+  border-radius:14px;
+}
+@media(max-width:760px){
+  body:before{
+    background:
+      radial-gradient(ellipse 85% 34% at 8% 12%,rgba(24,91,151,.30),transparent 74%),
+      radial-gradient(ellipse 80% 38% at 94% 35%,rgba(108,48,92,.22),transparent 74%),
+      radial-gradient(ellipse 90% 40% at 50% 82%,rgba(17,91,105,.20),transparent 76%),
+      linear-gradient(145deg,#0b1727 0%,#101522 48%,#090e19 100%);
+  }
+}
+
+
+/* FLOOR 4 — uploaded Midnight Waves background */
+body{
+  background:#070d18!important;
+  background-image:none!important;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(5,10,20,.36),rgba(5,10,20,.58)),
+    url("/assets/floor4-background.png");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.hero{
+  background:linear-gradient(rgba(5,10,20,.30),rgba(5,10,20,.48))!important;
+}
+.page-hero{
+  background:linear-gradient(180deg,rgba(7,13,24,.38),rgba(7,13,24,.54))!important;
+}
+.page-content{
+  background:linear-gradient(180deg,rgba(7,13,24,.38),rgba(7,13,24,.58))!important;
+}
+.section{
+  background:linear-gradient(180deg,rgba(7,13,24,.10),rgba(7,13,24,.22))!important;
+}
+
+
+/* Individual FLOOR identity backgrounds — same visual family, page-specific number */
+body:not([class]):before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor1-background.svg")!important;
+}
+body.page-tokenomics:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor2-background.svg")!important;
+}
+body.page-presale:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor3-background.svg")!important;
+}
+body.page-roadmap:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor5-background.svg")!important;
+}
+body.page-whitepaper:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor6-background.svg")!important;
+}
+body.page-community:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor7-background.svg")!important;
+}
+body.page-faq:before{
+  background-image:linear-gradient(rgba(5,10,20,.34),rgba(5,10,20,.52)),url("/assets/floor8-background.svg")!important;
+}
+body:before{
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+}
+@media(max-width:760px){
+ body:before{background-position:center center!important}
+}
+
+
+/* APPROVED HOME ART + WOODEN ELEVATOR MENU — 14 Nov 2026 */
+.hero-art{
+  display:block!important;
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(180deg,rgba(3,7,13,.04) 20%,rgba(3,7,13,.16) 55%,rgba(3,7,13,.82) 100%),
+    url("/assets/home-floor4.jpg")!important;
+  background-size:cover!important;
+  background-position:center top!important;
+  background-repeat:no-repeat!important;
+}
+.hero{background:#050a12!important;min-height:min(850px,calc(100vh - 78px))}
+.hero-content{padding-bottom:54px}
+
+/* Full-height wooden elevator image behind the real, accessible navigation. */
+.elevator-drawer{
+  isolation:isolate;
+  overflow-x:hidden;
+  width:min(354px,92vw);
+  padding:20px 20px 24px;
+  background:#24140c url("/assets/menu-elevator.jpg") center center/cover no-repeat!important;
+  border-left:1px solid rgba(230,173,91,.62);
+  box-shadow:-22px 0 65px rgba(0,0,0,.68);
+}
+.elevator-drawer:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  background:linear-gradient(180deg,rgba(16,7,2,.22),rgba(17,7,2,.48) 48%,rgba(8,4,2,.42));
+  pointer-events:none;
+}
+.drawer-top,.panel-label,.floor-list,.drawer-foot{position:relative;z-index:1}
+.drawer-top{border-bottom:1px solid rgba(255,205,132,.38);padding-bottom:12px}
+.drawer-brand{color:#ffe0a4;text-shadow:0 2px 8px #160700;font-size:18px;letter-spacing:.15em}
+.drawer-close{
+  color:#fff0d5;
+  background:rgba(24,12,5,.55);
+  border:1px solid rgba(255,216,160,.6);
+}
+.drawer-close:hover{background:rgba(173,35,26,.86);color:#fff}
+.panel-label{
+  color:#ffe0ae;
+  text-shadow:0 2px 7px #180900;
+  margin:16px 0 10px;
+}
+.floor-list{
+  display:grid;
+  width:100%;
+  max-width:none;
+  margin:0 auto;
+  padding:4px 0;
+  gap:12px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.floor-list:before,.floor-list:after{content:none!important;display:none!important}
+.floor-link{
+  display:grid;
+  grid-template-columns:40px 28px minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+  min-height:58px;
+  padding:7px 15px;
+  border:1px solid #72777a!important;
+  border-radius:999px!important;
+  color:#292b2d!important;
+  background:linear-gradient(180deg,#f8f8f6 0%,#d8dadd 22%,#aeb3b8 50%,#e5e7e8 76%,#969da2 100%)!important;
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.95),inset 0 -3px 5px rgba(48,52,56,.42),0 4px 10px rgba(0,0,0,.62)!important;
+  transform:none;
+  transition:filter .18s,box-shadow .18s,border-color .18s,transform .18s;
+}
+.floor-link:hover,.floor-link:focus-visible,.floor-link.active{
+  color:#262729!important;
+  border-color:#ff5147!important;
+  background:linear-gradient(180deg,#fff8f5 0%,#e7c5c0 25%,#b88d88 56%,#e2c9c5 78%,#9d7772 100%)!important;
+  box-shadow:inset 0 2px 2px #fff,0 0 0 1px #f04a40,0 0 18px rgba(255,54,43,.88),0 4px 10px rgba(0,0,0,.6)!important;
+  transform:translateY(-1px);
+  outline:none;
+}
+.floor-number{
+  width:38px;height:38px;flex:0 0 38px;
+  display:grid;place-items:center;
+  border:2px solid #777e83!important;
+  border-radius:50%;
+  color:#34383b!important;
+  background:radial-gradient(circle at 32% 22%,#fff 0%,#d2d5d7 50%,#858c91 100%)!important;
+  box-shadow:inset 0 2px 4px #fff,inset 0 -2px 4px #5557,0 2px 5px #3338!important;
+  font:700 17px 'Space Grotesk',sans-serif;
+}
+.floor-link:hover .floor-number,.floor-link:focus-visible .floor-number,.floor-link.active .floor-number{
+  color:#fff!important;
+  border-color:#a92e27!important;
+  background:radial-gradient(circle at 32% 22%,#ffaaa2 0%,#d64a40 52%,#6b1714 100%)!important;
+  box-shadow:inset 0 2px 4px #fff9,0 0 13px #ff443b!important;
+}
+.floor-icon{
+  display:block;
+  width:25px;height:25px;
+  grid-column:2;
+  grid-row:1;
+  margin:auto;
+}
+.floor-name{
+  grid-column:3;
+  grid-row:1;
+  color:#282b2e!important;
+  text-shadow:0 1px rgba(255,255,255,.8);
+  font:700 13px 'Georgia',serif!important;
+  letter-spacing:.055em!important;
+}
+.drawer-foot{
+  color:#ffe0ae;
+  text-shadow:0 2px 7px #180900;
+  margin-top:18px;
+  font-size:9px;
+  letter-spacing:.12em;
+}
+@media(max-width:760px){
+  .hero{min-height:calc(100svh - 68px)}
+  .hero-art{
+    background-position:center top!important;
+    background-size:auto 100%!important;
+  }
+  .hero-content{padding:0 18px 36px}
+  .elevator-drawer{
+    width:92vw;
+    max-width:440px;
+    padding:16px 18px calc(20px + env(safe-area-inset-bottom));
+    background-position:center center!important;
+  }
+  .floor-list{gap:10px}
+  .floor-link{min-height:55px;padding:6px 13px}
+  .floor-number{width:36px;height:36px}
+  .floor-name{font-size:12px!important}
+}
+
+
+/* SOFTER ARCHITECTURAL FRAMES — rounded windows, panels and content surfaces.
+   The approved vintage elevator floor buttons are intentionally left untouched. */
+:root{
+  --frame-radius:22px;
+  --frame-radius-large:30px;
+}
+.site-header{
+  border-bottom:1px solid rgba(203,176,120,.20);
+}
+.brand-mark{
+  border-radius:9px 15px 9px 15px;
+  box-shadow:inset 0 1px rgba(255,255,255,.16),0 4px 14px rgba(0,0,0,.24);
+}
+.menu-trigger{
+  border-radius:999px;
+}
+.btn{
+  border-radius:999px;
+}
+.surface,.stat,.milestone,.book-panel{
+  border-radius:var(--frame-radius)!important;
+  border:1px solid rgba(203,176,120,.26)!important;
+  overflow:hidden;
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.30),
+    inset 0 1px rgba(255,255,255,.055),
+    inset 0 0 0 1px rgba(255,255,255,.012)!important;
+}
+.page-content .surface,.page-content .stat,.page-content .milestone,.page-content .book-panel{
+  background:
+    linear-gradient(145deg,rgba(25,37,51,.94),rgba(9,15,24,.97))!important;
+}
+.milestone{
+  grid-template-columns:82px minmax(0,1fr);
+  position:relative;
+}
+.milestone:before,.surface:before,.book-panel:before{
+  content:"";
+  display:block;
+  position:absolute;
+  pointer-events:none;
+}
+.milestone,.surface,.book-panel{position:relative}
+.milestone:before,.surface:before,.book-panel:before{
+  inset:0;
+  border-radius:inherit;
+  border:1px solid rgba(255,255,255,.035);
+}
+.notice{
+  border:1px solid rgba(203,176,120,.20);
+  border-left:3px solid var(--gold);
+  border-radius:5px var(--frame-radius) var(--frame-radius) 5px;
+  box-shadow:0 10px 28px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.04);
+}
+.tag{
+  border-radius:999px;
+  padding:6px 13px;
+  background:rgba(203,176,120,.045);
+}
+.faq-item{
+  border:1px solid rgba(203,176,120,.18);
+  border-radius:16px;
+  padding:18px 22px;
+  margin:0 0 12px;
+  background:linear-gradient(145deg,rgba(20,30,42,.78),rgba(9,14,22,.82));
+  transition:border-color .2s,background .2s,box-shadow .2s;
+}
+.faq-item[open]{
+  border-color:rgba(203,176,120,.42);
+  background:linear-gradient(145deg,rgba(27,40,55,.92),rgba(10,16,25,.96));
+  box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+.faq-item summary{
+  list-style:none;
+  position:relative;
+  padding-right:34px;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{
+  content:"+";
+  position:absolute;
+  right:0;top:-5px;
+  width:27px;height:27px;
+  display:grid;place-items:center;
+  border:1px solid rgba(203,176,120,.36);
+  border-radius:50%;
+  color:var(--gold2);
+  font:400 19px/1 Inter,sans-serif;
+  transition:transform .2s,background .2s;
+}
+.faq-item[open] summary:after{
+  content:"−";
+  background:rgba(203,176,120,.10);
+}
+.faq-item p{margin:12px 0 0}
+.data-row{
+  border-bottom-color:rgba(203,176,120,.14);
+}
+.page-hero{
+  border-bottom:1px solid rgba(203,176,120,.20);
+}
+.page-hero .wrap{
+  position:relative;
+}
+@media(max-width:760px){
+  :root{--frame-radius:19px;--frame-radius-large:24px}
+  .surface,.stat,.milestone,.book-panel{padding:21px!important}
+  .milestone{grid-template-columns:52px minmax(0,1fr);gap:12px}
+  .faq-item{padding:16px 17px}
+  .menu-trigger{padding:10px 15px}
+}
